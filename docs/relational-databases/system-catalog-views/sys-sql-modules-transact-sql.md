@@ -1,15 +1,13 @@
----
+﻿---
 title: "sys.sql_modules (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.date: "01/09/2018"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "sys.sql_modules catalog view"
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +36,7 @@ ms.workload: "On Demand"
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID of the object of the containing object. Is unique within a database.|  
-|**definition**|**nvarchar(max)**|SQL text that defines this module.<br /><br /> NULL = Encrypted.|  
+|**definition**|**nvarchar(max)**|SQL text that defines this module. This value can also be obtained using the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) built-in function.<br /><br /> NULL = Encrypted.|  
 |**uses_ansi_nulls**|**bit**|Module was created with SET ANSI_NULLS ON.<br /><br /> Will always be = 0 for rules and defaults.|  
 |**uses_quoted_identifier**|**bit**|Module was created with SET QUOTED_IDENTIFIER ON.|  
 |**is_schema_bound**|**bit**|Module was created with SCHEMABINDING option.<br /><br /> Always contains a value of 1 for natively compiled stored procedures.|  

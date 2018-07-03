@@ -1,23 +1,19 @@
----
+﻿---
 title: "Spatial Results Window | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "ssms"
-ms.service: ""
-ms.component: "scripting"
+ms.prod: sql
+ms.technology: scripting
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Spatial Results Window
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

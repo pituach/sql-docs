@@ -2,15 +2,14 @@
 title: "Using URL Access in a Web Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "application-integration"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -24,10 +23,9 @@ helpviewer_keywords:
   - "hyperlinks [Reporting Services]"
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 caps.latest.revision: 33
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "On Demand"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Integrating Reporting Services Using URL Access - Web Application
   URL access in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is specifically designed to enable access to individual reports over a network. This type of access is best for integrating report viewing and navigation into a custom Web application. To use URL access in Web applications, you can:  

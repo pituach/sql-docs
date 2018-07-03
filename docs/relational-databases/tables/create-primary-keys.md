@@ -1,25 +1,22 @@
----
+﻿---
 title: "Create Primary Keys | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "tables"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-tables"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "primary keys [SQL Server], creating"
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Primary Keys
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates a primary key on the column `TransactionID`.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER TABLE Production.TransactionHistoryArchive   
@@ -88,7 +85,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates a table and defines a primary key on the column `TransactionID`.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE TABLE Production.TransactionHistoryArchive1  
@@ -107,7 +104,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates a table and defines a primary key on the column `CustomerID` and a clustered index on `TransactionID`.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE TABLE Production.TransactionHistoryArchive1  

@@ -1,22 +1,20 @@
----
+﻿---
 title: "CREATE DATABASE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/16/2017"
-ms.prod: ""
+ms.date: "02/14/20178"
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.component: "t-sql|statements"
+ms.service: sql-data-warehouse
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.component: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE DATABASE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -58,7 +56,7 @@ For more information about the Windows and SQL collation names, see [COLLATE (Tr
 Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] use 'datawarehouse' .  
   
 *MAXSIZE*  
-The default is 10,240 GB (10 TB).  
+The default is 245,760 GB (240 TB).  
 
 **Applies to:** Optimized for Elasticity performance tier
 

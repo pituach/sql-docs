@@ -1,25 +1,16 @@
 ---
-title: "Predict and plot from model (R in SQL quickstart) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/20/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-  - "SQL"
-ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "On Demand"
+title: Predict and plot from model (R in SQL quickstart) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Predict and plot from model (R in SQL quickstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 To perform _scoring_ using new data, get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model.
 

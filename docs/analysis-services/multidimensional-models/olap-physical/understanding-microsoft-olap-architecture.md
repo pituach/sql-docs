@@ -1,28 +1,14 @@
 ---
 title: "Understanding Microsoft OLAP Architecture | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "analysis-services"
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "multidimensional data [Analysis Services], about multidimensional data"
-ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
-caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Understanding Microsoft OLAP Architecture
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -55,6 +41,6 @@ ms.workload: "Inactive"
  [Globalization scenarios for Analysis Services](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
 ## See Also  
- [Technical Reference &#40;SSAS&#41;](../../../analysis-services/powershell/technical-reference-ssas.md)  
+ [Technical Reference ](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   

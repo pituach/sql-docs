@@ -1,15 +1,13 @@
----
+﻿---
 title: "CHANGETABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "change tracking [SQL Server], CHANGETABLE"
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -155,7 +153,7 @@ CHANGETABLE (
 ### A. Returning rows for an initial synchronization of data  
  The following example shows how to obtain data for an initial synchronization of the table data. The query returns all row data and their associated versions. You can then insert or add this data to the system that will contain the synchronized data.  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -167,7 +165,7 @@ CROSS APPLY CHANGETABLE
 ### B. Listing all changes that were made since a specific version  
  The following example lists all changes that were made in a table since the specified version (`@last_sync_version)`. [Emp ID] and SSN are columns in a composite primary key.  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -179,7 +177,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### C. Obtaining all changed data for a synchronization  
  The following example shows how you can obtain all data that has changed. This query joins the change tracking information with the user table so that user table information is returned. A `LEFT OUTER JOIN` is used so that a row is returned for deleted rows.  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -194,7 +192,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### D. Detecting conflicts by using CHANGETABLE(VERSION...)  
  The following example shows how to update a row only if the row has not changed since the last synchronization. The version number of the specific row is obtained by using `CHANGETABLE`. If the row has been updated, changes are not made and the query returns information about the most recent change to the row.  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  

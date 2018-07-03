@@ -2,14 +2,12 @@
 title: "sp_indexoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "sp_indexoption"
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +89,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ### A. Setting an option on a specific index  
  The following example disallows page locks on the `IX_Customer_TerritoryID` index on the `Customer` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',  
@@ -102,7 +99,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
 ### B. Setting an option on all indexes on a table  
  The following example disallows row locks on all indexes associated with the `Product` table. The `sys.indexes` catalog view is queried before and after executing the `sp_indexoption` procedure to show the results of the statement.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options for all indexes on the table.  
@@ -124,7 +121,7 @@ GO
 ### C. Setting an option on a table with no clustered index  
  The following example disallows page locks on a table with no clustered index (a heap). The `sys.indexes` catalog view is queried before and after the `sp_indexoption` procedure is executed to show the results of the statement.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options of the table.   

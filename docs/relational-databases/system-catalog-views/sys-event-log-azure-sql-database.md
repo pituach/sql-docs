@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.event_log (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -8,8 +8,7 @@ ms.reviewer: ""
 ms.service: "sql-database"
 ms.component: "system-catalog-views"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "sys.event_log"
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -171,7 +170,7 @@ WHERE event_type = 'throttling'
 ### DB-Scoped Extended Event  
  Use the following sample code to set up the db-scoped Extended Event (XEvent) session:  
   
-```tsql  
+```sql  
 IF EXISTS  
     (SELECT * from sys.database_event_sessions  
         WHERE name = 'azure_monitor_deadlock_session')  
@@ -203,7 +202,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
 
 Use the following query to check if there is a deadlock.  
   
-```tsql  
+```sql  
 WITH CTE AS (  
     SELECT CAST(xet.target_data AS XML)  AS [target_data_XML]  
         FROM            sys.dm_xe_database_session_targets AS xet  

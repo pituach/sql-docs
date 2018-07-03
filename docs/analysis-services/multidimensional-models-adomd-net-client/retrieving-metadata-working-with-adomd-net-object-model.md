@@ -1,33 +1,16 @@
 ---
 title: "Working with the ADOMD.NET Object Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "analysis-services"
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "metadata [ADOMD.NET]"
-  - "object model (client) [ADOMD.NET]"
-  - "retrieving metadata"
-ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: adomd
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Retrieving Metadata - Working with ADOMD.NET Object Model
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   ADOMD.NET provides an object model for viewing the cubes and subordinate objects contained by an analytical data source. However, not all metadata for a given analytical data source is available through the object model. The object model provides access to only the information that is most useful for a client application to display in order to allow a user to interactively construct commands. Because of the reduced complexity of the metadata to present, the ADOMD.NET object model is easier to use.  
   
  In the ADOMD.NET object model, the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> object provides access to information on the online analytical processing (OLAP) cubes and mining models defined on an analytical data source, and related objects such as dimensions, named sets, and mining algorithms.  

@@ -2,14 +2,13 @@
 title: "Create a Basic Table Report (SSRS Tutorial) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/07/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -23,7 +22,6 @@ caps.latest.revision: 67
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "kfile"
-ms.workload: "Active"
 ---
 
 # Create a Basic Table Report (SSRS Tutorial)

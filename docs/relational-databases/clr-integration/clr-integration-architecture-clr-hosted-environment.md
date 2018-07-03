@@ -2,15 +2,10 @@
 title: "CLR Hosted Environment | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "type-safe code [CLR integration]"
@@ -31,10 +26,9 @@ helpviewer_keywords:
   - "HPAs [CLR integration]"
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR Integration Architecture - CLR Hosted Environment
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

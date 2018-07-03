@@ -2,14 +2,10 @@
 title: "Transaction Lifetimes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "docset-sql-devref"
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,10 +13,9 @@ helpviewer_keywords:
   - "Transact-SQL vs. managed code"
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Transaction Lifetimes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

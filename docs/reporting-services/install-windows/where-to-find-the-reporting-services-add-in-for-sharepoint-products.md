@@ -2,24 +2,21 @@
 title: "Where to find the Reporting Services add-in for SharePoint Products | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.service: ""
-ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
+
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "rsSharePoint"
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "On Demand"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 
 # Where to find the Reporting Services add-in for SharePoint Products

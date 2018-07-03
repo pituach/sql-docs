@@ -1,15 +1,13 @@
----
+﻿---
 title: "sys.database_query_store_options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "sys.database_query_store_options catalog view"
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,8 +51,8 @@ ms.workload: "Inactive"
 |**query_capture_mode_desc**|**nvarchar(60)**|Textual description of the actual capture mode of Query Store:<br /><br /> ALL (default for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> AUTO (default for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> NONE|  
 |**size_based_cleanup_mode**|**smallint**|Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:<br /><br /> 1 = OFF – size based cleanup won’t be automatically activated.<br /><br /> 2 = AUTO - size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. This is the default configuration value.<br /><br />Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of max_storage_size_mb.|  
 |**size_based_cleanup_mode_desc**|**smallint**|Textual description of the actual size-based cleanup mode of Query Store:<br /><br /> OFF <br /><br /> AUTO (default)|  
-|**wait_stats_capture_mode**|**smallint**|Controls whether Query Store performs capture of wait statistics: <br /><br /> 0 = OFF <br /><br /> 1 = ON|
-|**wait_stats_mode_capture_desc**|**nvarchar(60)**|Textual description of the actual wait statistics capture mode: <br /><br /> OFF <br /><br /> ON (default)| 
+|**wait_stats_capture_mode**|**smallint**|Controls whether Query Store performs capture of wait statistics: <br /><br /> 0 = OFF <br /><br /> 1 = ON<br /> **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|
+|**wait_stats_mode_capture_desc**|**nvarchar(60)**|Textual description of the actual wait statistics capture mode: <br /><br /> OFF <br /><br /> ON (default)<br /> **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
   
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  

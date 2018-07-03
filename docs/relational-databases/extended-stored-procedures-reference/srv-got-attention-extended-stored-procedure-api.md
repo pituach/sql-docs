@@ -2,9 +2,8 @@
 title: "srv_got_attention (Extended Stored Procedure API) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "extended-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,10 +22,9 @@ helpviewer_keywords:
   - "srv_got_attention"
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # srv_got_attention (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

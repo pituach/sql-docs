@@ -2,14 +2,10 @@
 title: "CLR Scalar-Valued Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "docset-sql-devref"
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
@@ -21,10 +17,9 @@ helpviewer_keywords:
   - "scalar-valued functions"
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 caps.latest.revision: 81
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR Scalar-Valued Functions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

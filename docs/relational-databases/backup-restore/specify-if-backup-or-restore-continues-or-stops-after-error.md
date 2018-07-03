@@ -2,16 +2,13 @@
 title: "Specify If Backup or Restore Continues or Stops After Error | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "backup-restore"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-backup-restore"
+ms.technology: backup-restore
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [SQL Server], backups"
   - "backing up databases [SQL Server], errors"
@@ -19,10 +16,9 @@ helpviewer_keywords:
   - "database backups [SQL Server], errors"
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Specify If Backup or Restore Continues or Stops After Error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +70,7 @@ ms.workload: "Inactive"
   
 3.  In the [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement, specify the CONTINUE_AFTER ERROR option to continue or the STOP_ON_ERROR option to stop. The default behavior is to stop after encountering an error. This example instructs the backup operation to continue despite encountering an error.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
@@ -89,7 +85,7 @@ GO
   
 3.  In the [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, specify the CONTINUE_AFTER ERROR option to continue or the STOP_ON_ERROR option to stop. The default behavior is to stop after encountering an error. This example instructs the restore operation to continue despite encountering an error.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  

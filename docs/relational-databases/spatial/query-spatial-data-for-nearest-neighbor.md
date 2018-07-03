@@ -1,23 +1,22 @@
----
+﻿---
 title: "Query Spatial Data for Nearest Neighbor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "spatial"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Query Spatial Data for Nearest Neighbor
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ SELECT TOP ( number )
 ## Example  
  The following code example shows a Nearest Neighbor query that can use a spatial index. The example uses the `Person.Address` table in `AdventureWorks2012` database.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -95,7 +94,7 @@ ORDER BY SpatialLocation.STDistance(@g);
 ## Example  
  The following code example shows a Nearest Neighbor query that cannot use a spatial index.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  

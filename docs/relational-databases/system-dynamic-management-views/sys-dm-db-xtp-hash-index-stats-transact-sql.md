@@ -1,15 +1,12 @@
----
+﻿---
 title: "sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +20,10 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_hash_index_stats (dynamic management view)"
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ For more information, see [Hash Indexes for Memory-Optimized Tables](../../relat
 
 The following query can be used to troubleshoot the hash index bucket count of an existing table. The query returns statistics about percentage of empty buckets and chain length for all hash indexes on user tables.
 
-```t-sql
+```sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [table],   
     i.name                   as [index],   
@@ -94,7 +91,7 @@ For details on how to interpret the results of this query, see [Troubleshooting 
 
 Certain features use internal tables that leverage hash indexes, for example columnstore indexes on memory-optimized tables. The following query returns stats for hash indexes on internal tables that are linked to user tables.
 
-```t-sql
+```sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [user_table],
 	ia.type_desc as [internal_table_type],
@@ -117,7 +114,7 @@ Note that the BUCKET_COUNT of index on internal tables cannot be changed, thus t
 
 This query is not expected to return any rows unless you are using a feature that leverages hash indexes on internal tables. The following memory-optimized table contains a columnstore index. After creating this table, you will see hash indexes on internal tables.
 
-```t-sql
+```sql
   CREATE TABLE dbo.table_columnstore
   (
   	c1 INT NOT NULL PRIMARY KEY NONCLUSTERED,

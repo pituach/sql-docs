@@ -1,14 +1,14 @@
----
+﻿---
 title: "Installing SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
 ms.prod_service: "database-engine"
 ms.component: "smo"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,14 +17,16 @@ helpviewer_keywords:
   - "SQL Server Management Objects, installing"
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 
-ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 #Installing SMO
+
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 This page provides information on how to install SMO for use by applications and the system requirements to use SMO.
 

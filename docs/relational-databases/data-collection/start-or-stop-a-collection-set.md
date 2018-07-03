@@ -2,25 +2,20 @@
 title: "Start or Stop a Collection Set | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "data-collection"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "collection sets [SQL Server], stopping"
   - "collection sets [SQL Server], starting"
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Start or Stop a Collection Set
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +88,7 @@ ms.workload: "Inactive"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md) to start the collection set that has the ID of `1`.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
@@ -107,7 +102,7 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md) to stop the collection set that has the ID of `1`.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  

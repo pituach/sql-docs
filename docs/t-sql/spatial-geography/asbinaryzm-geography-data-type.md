@@ -2,14 +2,11 @@
 title: "AsBinaryZM (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,10 +19,9 @@ helpviewer_keywords:
   - "AsBinaryZM"
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # AsBinaryZM (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ ms.workload: "Inactive"
   
 ## Examples  
   
-```tsql  
+```sql  
 DECLARE @g1 GEOGRAPHY = 'Point(1 1 2 3)';  
   
 SELECT @g1.STAsBinary();  

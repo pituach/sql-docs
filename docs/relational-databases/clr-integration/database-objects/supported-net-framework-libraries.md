@@ -2,25 +2,19 @@
 title: "Supported .NET Framework Libraries | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "common language runtime [SQL Server], .NET Framework libraries"
   - ".NET Framework [CLR Integration]"
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Supported .NET Framework Libraries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

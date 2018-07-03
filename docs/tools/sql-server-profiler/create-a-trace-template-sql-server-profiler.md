@@ -2,26 +2,22 @@
 title: "Create a Trace Template (SQL Server Profiler) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-server-profiler"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: profiler
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "templates [SQL Server], traces"
   - "trace templates [SQL Server]"
   - "saving trace template"
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Create a Trace Template (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

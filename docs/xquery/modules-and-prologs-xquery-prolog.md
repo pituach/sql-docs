@@ -2,9 +2,8 @@
 title: "XQuery Prolog | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: sql
 ms.component: "xquery"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,10 +22,9 @@ helpviewer_keywords:
   - "default namespace declarations"
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Modules and Prologs - XQuery Prolog
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

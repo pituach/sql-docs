@@ -2,15 +2,14 @@
 title: "Convert CRI Dialog Box (Report Builder) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-builder"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
@@ -20,10 +19,9 @@ helpviewer_keywords:
   - "custom report items"
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "Inactive"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Convert CRI Dialog Box (Report Builder)
   This report contains custom report items (CRIs) with unsupported features. CRIs are extensions to the Report Definition Language (RDL) that support custom objects that display data in a report. CRIs include design-time and run-time components that are supplied by third-party software vendors.  

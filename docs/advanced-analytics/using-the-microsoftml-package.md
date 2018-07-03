@@ -1,27 +1,16 @@
 ---
-title: "Using the MicrosoftML Package with SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/23/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "r-services"
-ms.service: ""
-ms.component: "advanced-analytics"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 132
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: Using the MicrosoftML Package with SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Using the MicrosoftML package with SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The [**MicrosoftML**](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) package that is provided with Microsoft R Server and SQL Server 2017 includes multiple machine learning algorithms. These APIs were developed by Microsoft for internal machine learning applications, and have been refined over the years to support high performance on big data, using multicore processing and fast data streaming. MicrosoftML also includes numerous transformations for text and image processing.
 

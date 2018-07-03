@@ -2,14 +2,10 @@
 title: "CLR User-Defined Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "clr"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "docset-sql-devref"
+ms.technology: clr
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -36,10 +32,9 @@ helpviewer_keywords:
   - "indexes [CLR integration]"
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR User-Defined Types
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,25 +1,16 @@
 ---
-title: "Create a predictive model (R in SQL quickstart) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-  - "SQL"
-ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "On Demand"
+title: Create a predictive model (R in SQL quickstart) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Create a predictive model (R in SQL quickstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In this step, you'll learn how to train a model using R, and then save the model to a table in SQL Server. The model is a simple regression model that predicts the stopping distance of a car based on speed. You'll use the `cars` dataset included with R, because it is small and easy to understand.
 
@@ -134,7 +125,7 @@ EXEC sp_execute_external_script
 
 -- Save the generated model
 INSERT INTO [dbo].[stopping_distance_models] (model_name, model)
-VALUES (' latest model', @model)
+VALUES ('latest model', @model)
 ```
 
 **Results**

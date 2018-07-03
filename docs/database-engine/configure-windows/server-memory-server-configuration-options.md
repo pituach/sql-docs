@@ -2,16 +2,13 @@
 title: "Server Memory Server Configuration Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/27/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Virtual Memory Manager"
   - "max server memory option"
@@ -25,10 +22,9 @@ helpviewer_keywords:
   - "memory [SQL Server], servers"
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 78
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Server Memory Server Configuration Options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +127,7 @@ Memory can be configured up to the process virtual address space limit in all [!
 ### Example A  
  The following example sets the `max server memory` option to 4 GB:  
   
-```t-sql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -145,7 +141,7 @@ GO
 ### Example B. Determining Current Memory Allocation  
  The following query returns information about currently allocated memory.  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
 	large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 

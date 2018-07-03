@@ -1,28 +1,23 @@
----
+﻿---
 title: "Recompile a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "stored-procedures"
+ms.prod: sql
+ms.technology: stored-procedures
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stored-Procs"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sp_recompile"
   - "WITH RECOMPILE clause"
   - "recompiling stored procedures"
   - "stored procedures [SQL Server], recompiling"
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Recompile a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,7 +103,7 @@ AS
   
      And then copy and paste the second code example into the query window and click **Execute**. This executes the procedure and recompiles the procedure’s query plan.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -126,7 +121,7 @@ GO
   
      Then, copy and paste the following example into the query window and click **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  

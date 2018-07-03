@@ -1,15 +1,12 @@
----
+﻿---
 title: "TRUNCATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -28,10 +25,10 @@ helpviewer_keywords:
   - "dropping rows"
 ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 caps.latest.revision: 41
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +39,7 @@ ms.workload: "Active"
   
 ## Syntax  
   
-```tsql  
+```  
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
@@ -56,7 +53,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>  
 ```  
   
-```tsql  
+```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
@@ -139,7 +136,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ### A. Truncate a Table  
  The following example removes all data from the `JobCandidate` table. `SELECT` statements are included before and after the `TRUNCATE TABLE` statement to compare results.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT COUNT(*) AS BeforeTruncateCount   
@@ -158,7 +155,7 @@ GO
   
  The following example truncates specified partitions of a partitioned table. The `WITH (PARTITIONS (2, 4, 6 TO 8))` syntax causes partition numbers 2, 4, 6, 7, and 8 to be truncated.  
   
-```  
+```sql  
 TRUNCATE TABLE PartitionTable1   
 WITH (PARTITIONS (2, 4, 6 TO 8));  
 GO  

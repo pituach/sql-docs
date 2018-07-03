@@ -1,23 +1,22 @@
----
+﻿---
 title: "Native Compilation of Tables and Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology:
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Native Compilation of Tables and Stored Procedures
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ In-Memory OLTP compiles memory-optimized tables when they are created, and nativ
 
 The following query shows all table and stored procedure DLLs currently loaded in memory on the server:
 
-```tsql
+```sql
 SELECT
 		mod1.name,
 		mod1.description
@@ -60,7 +59,7 @@ Creating a memory-optimized table using the **CREATE TABLE** statement results i
 
 Consider the following sample script, which creates a database and a memory-optimized table:
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -153,7 +152,7 @@ For more information about natively compiled stored procedures, see [Natively Co
 
 Consider the following sample stored procedure, which inserts rows in the table t1 from the previous example:
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
 	with native_compilation,
 	     schemabinding,

@@ -2,16 +2,11 @@
 title: "Select rows to migrate by using a filter function (Stretch Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "stretch-database"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, predicates"
   - "predicates for Stretch Database"
@@ -19,15 +14,15 @@ helpviewer_keywords:
   - "inline table-valued functions for Stretch Database"
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Select rows to migrate by using a filter function (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  If you store cold data in a separate table, you can configure Stretch Database to migrate the entire table. If your table contains both hot and cold data, on the other hand, you can specify a filter predicate to select the rows to migrate. The filter predicate is an inline table-valued function. This topic describes how to write an inline table-valued function to select rows to migrate.  
+
+  If you store cold data in a separate table, you can configure Stretch Database to migrate the entire table. If your table contains both hot and cold data, on the other hand, you can specify a filter predicate to select the rows to migrate. The filter predicate is an inline table-valued function. This article describes how to write an inline table-valued function to select rows to migrate.  
   
 > [!IMPORTANT]
 > If you provide a filter function that performs poorly, data migration also performs poorly. Stretch Database applies the filter function to the table by using the CROSS APPLY operator.  
@@ -40,7 +35,7 @@ ms.workload: "Inactive"
   
 -   Run the ALTER TABLE statement to specify a filter function after you exit the wizard.  
   
- The ALTER TABLE syntax for adding a function is described later in this topic.  
+ The ALTER TABLE syntax for adding a function is described later in this article.  
   
 ## Basic requirements for the filter function  
  The inline table-valued function required for a Stretch Database filter predicate looks like the following example.  

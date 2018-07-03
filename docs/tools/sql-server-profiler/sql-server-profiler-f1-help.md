@@ -2,14 +2,11 @@
 title: "SQL Server Profiler dialog boxes | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/07/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-server-profiler"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: profiler
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
@@ -45,10 +42,9 @@ helpviewer_keywords:
   - "Find dialog box"
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # SQL Server Profiler dialog boxes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

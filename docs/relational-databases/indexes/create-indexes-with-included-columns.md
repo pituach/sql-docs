@@ -1,17 +1,14 @@
----
+﻿---
 title: "Create Indexes with Included Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "indexes"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: table-view-index
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index size [SQL Server]"
   - "index keys [SQL Server]"
@@ -24,10 +21,10 @@ helpviewer_keywords:
   - "nonkey columns"
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Indexes with Included Columns
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,7 +109,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   

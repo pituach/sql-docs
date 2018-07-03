@@ -1,15 +1,12 @@
----
+﻿---
 title: "sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +20,10 @@ helpviewer_keywords:
   - "sys.dm_sql_referencing_entities dynamic management function"
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -146,7 +143,7 @@ sys.dm_sql_referencing_entities (
 ### A. Returning the entities that refer to a given entity  
  The following example returns the entities in the current database that refer to the specified table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -157,7 +154,7 @@ GO
 ### B. Returning the entities that refer to a given type  
  The following example returns the entities that reference the alias type `dbo.Flag`. The result set shows that two stored procedures use this type. The `dbo.Flag` type is also used in the definition of several columns in the `HumanResources.Employee` table; however, because the type is not in the definition of a computed column, CHECK constraint, or DEFAULT constraint in the table, no rows are returned for the `HumanResources.Employee` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  

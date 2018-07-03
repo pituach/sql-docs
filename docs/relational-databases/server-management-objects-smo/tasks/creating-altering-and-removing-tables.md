@@ -1,28 +1,27 @@
----
+﻿---
 title: "Creating, Altering, and Removing Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "smo"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "tables [SMO]"
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Creating, Altering, and Removing Tables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), tables are represented by the <xref:Microsoft.SqlServer.Management.Smo.Table> object. In the SMO object hierarchy, the <xref:Microsoft.SqlServer.Management.Smo.Table> object is below the <xref:Microsoft.SqlServer.Management.Smo.Database> object.  
   
 ## Example  

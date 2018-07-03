@@ -2,16 +2,15 @@
 title: "Create Linked Servers (SQL Server Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "linked-servers"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.linkedserver.properties.general.f1"
   - "sql13.swb.linkedserver.properties.security.f1"
@@ -21,10 +20,9 @@ helpviewer_keywords:
   - "linked servers [SQL Server], creating"
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Create Linked Servers (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -204,7 +202,7 @@ ms.workload: "Active"
   
 1.  In Query Editor, enter the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command to link to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named `SRVR002\ACCTG`:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -216,7 +214,7 @@ ms.workload: "Active"
   
 2.  Execute the following code to configure the linked server to use the domain credentials of the login that is using the linked server.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -231,7 +229,7 @@ ms.workload: "Active"
   
 -   Execute the following code to test the connection to the linked server. This example the returns the names of the databases on the linked server.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -241,7 +239,7 @@ ms.workload: "Active"
   
 -   Use four-part names to refer to an object on a linked server. Execute the following code to return a list of all logins on the local server and their matching logins on the linked server.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

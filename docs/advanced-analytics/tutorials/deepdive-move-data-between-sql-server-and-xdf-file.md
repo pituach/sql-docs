@@ -1,27 +1,16 @@
 ---
-title: "Move data between SQL Server and XDF file (SQL and R deep dive)| Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-  - "SQL Server 2017"
-dev_langs: 
-  - "R"
-ms.assetid: 40887cb3-ffbb-4769-9f54-c006d7f4798c
-caps.latest.revision: 17
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Move data between SQL Server and XDF file (SQL and R deep dive)| Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Move data between SQL Server and XDF file (SQL and R deep dive)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 

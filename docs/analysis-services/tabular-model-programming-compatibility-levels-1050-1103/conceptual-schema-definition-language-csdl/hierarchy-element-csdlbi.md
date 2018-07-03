@@ -1,26 +1,14 @@
 ---
 title: "Hierarchy Element (CSDLBI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "analysis-services"
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Hierarchy Element (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +23,7 @@ ms.workload: "Inactive"
 |Level|Yes|One or more Level elements that define the columns used in the hierarchy.<br /><br /> See [Level Element &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md).|  
   
 ## Remarks  
- In tabular models, hierarchies are created by specifying parent-child relationships among columns in the same table. For more information, see [Hierarchies &#40;SSAS Tabular&#41;](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
+ In tabular models, hierarchies are created by specifying parent-child relationships among columns in the same table. For more information, see [Hierarchies](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
 ## Example  
  **Tabular**  

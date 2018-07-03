@@ -2,16 +2,13 @@
 title: "Server Configuration Options (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/13/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 keywords: 
   - "server configuration (SQL Server)"
 helpviewer_keywords: 
@@ -33,10 +30,9 @@ helpviewer_keywords:
   - "administering SQL Server, configuration options"
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 caps.latest.revision: 128
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Server Configuration Options (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +59,7 @@ Self-configuring options are those that [!INCLUDE[ssNoVersion](../../includes/ss
 ## Configuration Options Table  
  The following table lists all available configuration options, the range of possible settings, and default values. Configuration options are marked with letter codes as follows:  
   
--   A= Advanced options, which should be changed only by an experienced database administrator or a certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technician, and which require setting show advanced options to 1.  
+-   A= Advanced options, which should be changed only by an experienced database administrator or a certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] professional, and which require setting show advanced options to 1.  
   
 -   RR = Options requiring a restart of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

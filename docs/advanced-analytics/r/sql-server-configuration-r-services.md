@@ -1,22 +1,16 @@
 ---
-title: "SQL Server Configuration (R Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+title: SQL Server Configuration (R Services) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # SQL Server configuration for use with R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is the second in a series that describes performance optimization for R Services based on two case studies.  This article provides guidance about the hardware and network configuration of the computer that is used to run SQL Server R Services. It also contains information about ways to configure the SQL Server instance, database, or tables used in a solution. Because use of NUMA in SQL Server blurs the line between hardware and database optimizations, a third section discusses CPU affinitization and resource governance in detail.
 

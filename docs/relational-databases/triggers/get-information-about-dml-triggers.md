@@ -1,17 +1,16 @@
----
+﻿---
 title: "Get Information About DML Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "triggers"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-dml"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "metadata [SQL Server], triggers"
   - "viewing DML triggers"
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "DML triggers, viewing"
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Get Information About DML Triggers
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ ms.workload: "Inactive"
   
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view the definition of the `iuPerson` trigger.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT definition   
@@ -101,7 +100,7 @@ WHERE object_id = OBJECT_ID(N'Person.iuPerson');
 GO  
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.iuPerson')) AS ObjectDefinition;   
@@ -109,7 +108,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 EXEC sp_helptext 'Person.iuPerson'  
@@ -161,7 +160,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT  name, object_id, schema_id, parent_object_id, type_desc, create_date, modify_date, is_published  
@@ -171,7 +170,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID(N'Person.iuPerson'), 'ExecIsInsteadOfTrigger');   
@@ -187,7 +186,7 @@ GO
   
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view the events that fire the `iuPerson` trigger.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT object_id, type, type_desc, is_trigger_event, event_group_type, event_group_type_desc   
@@ -196,7 +195,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO   
 SELECT object_id, type,is_first, is_last  

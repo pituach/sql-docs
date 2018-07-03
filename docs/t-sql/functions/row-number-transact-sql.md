@@ -1,15 +1,12 @@
----
+﻿---
 title: "ROW_NUMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/11/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,10 +21,10 @@ helpviewer_keywords:
   - "sequential row numbers [SQL Server]"
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
 caps.latest.revision: 50
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +73,7 @@ ROW_NUMBER ( )
 
 The following query returns the four system tables in alphabetic order.
 
-```t-sql
+```sql
 SELECT 
   name, recovery_model_desc
 FROM sys.databases 
@@ -95,7 +92,7 @@ ORDER BY name ASC;
 
 To add a row number column in front of each row, add a column with the `ROW_NUMBER` function, in this case named `Row#`. You must move the `ORDER BY` clause up to the `OVER` clause.
 
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(ORDER BY name ASC) AS Row#,
   name, recovery_model_desc
@@ -114,7 +111,7 @@ WHERE database_id < 5;
 
 Adding a `PARTITION BY` clause on the `recovery_model_desc` column, will restart the numbering when the `recovery_model_desc` value changes. 
  
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(PARTITION BY recovery_model_desc ORDER BY name ASC) 
     AS Row#,
@@ -135,7 +132,7 @@ FROM sys.databases WHERE database_id < 5;
 ### B. Returning the row number for salespeople  
  The following example calculates a row number for the salespeople in [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] based on their year-to-date sales ranking.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS Row,   
@@ -169,7 +166,7 @@ Row FirstName    LastName               SalesYTD
 ### C. Returning a subset of rows  
  The following example calculates row numbers for all rows in the `SalesOrderHeader` table in the order of the `OrderDate` and returns only rows `50` to `60` inclusive.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH OrderedOrders AS  
@@ -186,7 +183,7 @@ WHERE RowNumber BETWEEN 50 AND 60;
 ### D. Using ROW_NUMBER() with PARTITION  
  The following example uses the `PARTITION BY` argument to partition the query result set by the column `TerritoryName`. The `ORDER BY` clause specified in the `OVER` clause orders the rows in each partition by the column `SalesYTD`. The `ORDER BY` clause in the `SELECT` statement orders the entire query result set by `TerritoryName`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
@@ -224,7 +221,7 @@ Jae        Pak                  United Kingdom       4116871.22    1
 ### E. Returning the row number for salespeople  
  The following example returns the `ROW_NUMBER` for sales representatives based on their assigned sales quota.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) 
@@ -253,7 +250,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ### F. Using ROW_NUMBER() with PARTITION  
  The following example shows using the `ROW_NUMBER` function with the `PARTITION BY` argument. This causes the `ROW_NUMBER` function to number the rows in each partition.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(PARTITION BY SalesTerritoryKey 

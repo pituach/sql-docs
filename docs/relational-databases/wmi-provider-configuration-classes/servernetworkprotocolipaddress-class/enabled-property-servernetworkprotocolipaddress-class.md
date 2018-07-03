@@ -2,9 +2,8 @@
 title: "Enabled Property (ServerNetworkProtocolIpAddress Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "wmi"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,10 +20,9 @@ helpviewer_keywords:
   - "Enabled property"
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # Enabled Property (ServerNetworkProtocolIpAddress Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

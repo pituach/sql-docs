@@ -1,27 +1,26 @@
----
+﻿---
 title: "View or Change the Compatibility Level of a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility levels [SQL Server], viewing"
   - "compatibility [SQL Server], databases"
   - "compatibility levels [SQL Server], changing"
 ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View or Change the Compatibility Level of a Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example returns the compatibility level of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT compatibility_level  
@@ -90,7 +89,7 @@ GO
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example changes the compatibility level of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `120`, which is the compatibility level for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 120;  
 GO  

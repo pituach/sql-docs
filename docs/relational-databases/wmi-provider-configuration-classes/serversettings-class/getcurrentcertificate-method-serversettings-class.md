@@ -2,9 +2,8 @@
 title: "GetCurrentCertificate Method (ServerSettings Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "wmi"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,10 +20,9 @@ helpviewer_keywords:
   - "GetCurrentCertificate method"
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # GetCurrentCertificate Method (ServerSettings Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

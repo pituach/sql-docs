@@ -1,27 +1,16 @@
 ---
-title: "Using R code in Transact-SQL (R in SQL quickstart) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/20/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: 36
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Active"
+title: Using R code in Transact-SQL (R in SQL quickstart) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Using R code in Transact-SQL (R in SQL quickstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This tutorial walks you through the basic mechanics of calling an R script from a T-SQL stored procedure.
 
@@ -47,7 +36,7 @@ Your SQL Server instance can be in an Azure virtual machine or on-premises. Just
 
 To run SQL queries that include R script, you can use any other application that can connect to a database and run T-SQL code. SQL professionals can use SQL Server Management Studio (SSMS) or Visual Studio.
 
-For this tutorial, to show how easy it is to run R inside SQL Server, we've used the new **mssql extension for Visual Studio Code**. VS Code is a free development environment that can run on Linux, macOS, or Windows. The **mssql*** extension is a lightweight extension for running SLq queries. To install it, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+For this tutorial, to show how easy it is to run R inside SQL Server, we've used the new **mssql extension for Visual Studio Code**. VS Code is a free development environment that can run on Linux, macOS, or Windows. The **mssql** extension is a lightweight extension for running T-SQL queries. To install it, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## Connect to a database and run a Hello World test script
 
@@ -77,7 +66,7 @@ For this tutorial, to show how easy it is to run R inside SQL Server, we've used
 
 ## Troubleshooting
 
-+ If you get any errors from this query, installation might be incomplete. After adding the feature using the SQL Server setup wizard, you must take some additional steps to enable use of external code libraries.  See [Set up SQL Server R Services](../r/set-up-sql-server-r-services-in-database.md).
++ If you get any errors from this query, installation might be incomplete. After adding the feature using the SQL Server setup wizard, you must take some additional steps to enable use of external code libraries.  See [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 + Make sure that the Launchpad service is running. Depending on your environment, you might need to enable the R worker accounts to connect to SQL Server, install additional network libraries, enable remote code execution, or restart the instance after everything is configured. See
 [R Services Installation and Upgrade FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)

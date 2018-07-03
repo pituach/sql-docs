@@ -3,16 +3,18 @@
 
 # [SQL Server Guides](sql-server-guides.md)
 ## Always On Availability Groups Troubleshooting and Monitoring Guide
-## [Index design](sql-server-index-design-guide.md)
+## [Index Architecture and Design](sql-server-index-design-guide.md)
 ## [Memory Management Architecture](memory-management-architecture-guide.md)
 ### [Reading pages](reading-pages.md)  
 ### [Writing pages](writing-pages.md)
 ## [Pages and Extents Architecture](pages-and-extents-architecture-guide.md)
 ## [Post-migration Validation and Optimization](post-migration-validation-and-optimization-guide.md)
+## [Performance](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md) 
 ## [Query Processing Architecture](query-processing-architecture-guide.md)
 ## [Thread and Task Architecture](thread-and-task-architecture-guide.md)
-## [Transaction Log Architecture and Management](sql-server-transaction-log-architecture-and-management-guide.md)
-## Transaction Locking and Row Versioning Guide
+## [Transaction Log Architecture and Management Guide](sql-server-transaction-log-architecture-and-management-guide.md)
+## [Transaction Locking and Row Versioning Guide](sql-server-transaction-locking-and-row-versioning-guide.md)
+## [Ghost record cleanup process](ghost-record-cleanup-process-guide.md)
 
 # [Backup and restore](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -55,8 +57,8 @@
 ## [Database Lifecycle Management](database-lifecycle-management.md)  
 ## [Administer Multiple Servers Using Central Management Servers](administer-multiple-servers-using-central-management-servers.md)  
 
+# [Joins](../relational-databases/performance/joins.md)
 # [Partitions](../relational-databases/partitions/partitioned-tables-and-indexes.md)
-# [Performance](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Policy-based management](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
 # [Replication](../relational-databases/replication/sql-server-replication.md)
@@ -71,6 +73,7 @@
 # [SQL Trace](../relational-databases/sql-trace/sql-trace.md)
 # [Statistics](../relational-databases/statistics/statistics.md)
 # [Stored procedures](../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+# [Subqueries](../relational-databases/performance/subqueries.md)
 # [Synonyms](../relational-databases/synonyms/synonyms-database-engine.md)
 # [System catalog views](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 # [System compatibility views](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)

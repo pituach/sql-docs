@@ -1,23 +1,21 @@
----
+﻿---
 title: "Troubleshooting Hash Indexes for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine-imoltp"
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Troubleshooting Hash Indexes for Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ If the hash indexed values have a high rate of duplicates, the hash buckets suff
   
 Assume you have the same SupportEvent table from the earlier T-SQL syntax code block. The following T-SQL code demonstrates how you can find and display the ratio of *all* values to *unique* values:  
   
-```t-sql
+```sql
 -- Calculate ratio of:  Rows / Unique_Values.  
 DECLARE @allValues float(8) = 0.0, @uniqueVals float(8) = 0.0;  
   
@@ -75,7 +73,7 @@ This section discusses how to troubleshoot the bucket count for your hash index.
   
 You can monitor the statistical health of your hash indexes by running the following T-SQL SELECT. The SELECT uses the data management view (DMV) named **sys.dm_db_xtp_hash_index_stats**.  
   
-```t-sql
+```sql
 SELECT  
   QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [table],   
   i.name                   as [index],   
@@ -119,7 +117,7 @@ The following T-SQL code block gives you an easy way to test a `SELECT * FROM sy
     b. The loop inserts 262,144 rows in approximately 1 minute.  
 3. PRINTs a message asking you to run the earlier SELECT from **sys.dm_db_xtp_hash_index_stats**.  
   
-```t-sql
+```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  
 go  
   

@@ -2,9 +2,8 @@
 title: "sys.sp_rda_test_connection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,8 +22,7 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +83,7 @@ EXECUTE sys.sp_rda_test_connection
   
 ### Check the connection from SQL Server to the remote Azure server  
   
-```tsql  
+```sql  
 EXECUTE sys.sp_rda_test_connection @database_name = N'<Stretch-enabled database>'  
 GO  
   
@@ -99,7 +97,7 @@ GO
   
 ### Check the Azure firewall  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -115,7 +113,7 @@ GO
   
 ### Check authentication credentials  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -131,7 +129,7 @@ GO
   
 ### Check the status of the remote Azure server  
   
-```tsql  
+```sql  
 USE <SQL Server database>  
 GO  
 EXECUTE sys.sp_rda_test_connection   

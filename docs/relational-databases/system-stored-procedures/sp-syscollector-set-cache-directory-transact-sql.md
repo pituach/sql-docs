@@ -2,14 +2,12 @@
 title: "sp_syscollector_set_cache_directory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,10 +20,9 @@ helpviewer_keywords:
   - "sp_syscollector_set_cache_directory stored procedure"
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## Examples  
  The following example disables the data collector, sets the cache directory for the data collector to `D:\tempdata`,and then enables the data collector.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXECUTE dbo.sp_syscollector_disable_collector;  

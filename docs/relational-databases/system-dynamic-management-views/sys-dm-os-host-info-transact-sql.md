@@ -1,17 +1,13 @@
----
+﻿---
 title: "sys.dm_os_host_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/10/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_os_host_info"
   - "sys.dm_os_host_info_TSQL"
@@ -23,13 +19,13 @@ helpviewer_keywords:
   - "sys.dm_os_host_info dynamic management view"
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm_os_host_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Returns one row that displays operating system version information.  
   

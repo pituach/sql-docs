@@ -2,16 +2,13 @@
 title: "Register a Service Principal Name for Kerberos Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "configure-windows"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], SPNs"
   - "network connections [SQL Server], SPNs"
@@ -20,10 +17,9 @@ helpviewer_keywords:
   - "SPNs [SQL Server]"
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 caps.latest.revision: 59
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Register a Service Principal Name for Kerberos Connections
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +34,7 @@ ms.workload: "Active"
   
 You can verify that a connection is using Kerberos by querying the sys.dm_exec_connections dynamic management view. Run the following query and check the value of the auth_scheme column, which will be "KERBEROS" if Kerberos is enabled.  
   
-```t-sql  
+```sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -152,7 +148,7 @@ Service accounts can be used as an SPN. They are specified through the connectio
   
 To determine the authentication method of a connection, execute the following query.  
   
-```t-sql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

@@ -4,23 +4,19 @@ description: "Use automatic seeding to initialize secondary replicas."
 services: data-lake-analytics
 ms.custom: ""
 ms.date: "09/25/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "availability-groups"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-- "dbe-high-availability"
+ms.technology: high-availability
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
 - "Automatic seeding [SQL Server], secondary replica"
 ms.assetid: 
 caps.latest.revision: 
-author: "allanhirt"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: mathoma
+manager: craigg
 ---
 # Automatic seeding for secondary replicas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ In SQL Server 2012 and 2014, the only way to initialize a secondary replica in a
 Considerations for using automatic seeding include:
 
 * [Performance and transaction log impact on the primary replica](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Disk layout](#disk-layout)
+* [Disk layout](#disklayout)
 * [Security](#security)
 
 
@@ -152,9 +148,6 @@ If successful, the database(s) are automatically created on the secondary replic
 In addition to the [Dynamic Management Views](#dynamic-management-views) described below, the start and completion of automatic seeding can be seen in the SQL Server Log:
 
 ![SQL server log][2]
-
-
-
 
 ## Combine backup and restore with automatic seeding
 

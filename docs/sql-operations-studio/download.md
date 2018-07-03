@@ -2,51 +2,104 @@
 title: Download and install Microsoft SQL Operations Studio (preview) | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio (preview) for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "11/29/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sstein"
+ms.date: "06/20/2018"
+ms.prod: sql
+ms.reviewer: "alayu; sstein"
 ms.suite: "sql"
+ms.prod_service: sql-tools
+ms.component: sos
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-ms.workload: "Inactive"
 ---
-# Download and install [!INCLUDE[name-sos](../includes/name-sos.md)]
+# Download and install SQL Operations Studio (preview)
+
+[!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
+
+Download and install the latest release, the *June Public Preview*:
+
+|Platform|Download|Release date| Version |
+|:---|:---|:---|:---|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=875602)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=875603)|June 20, 2018 |0.30.6|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=875604)|June 20, 2018 |0.30.6|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=875607)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=875606)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)|June 20, 2018 |0.30.6|
+
+For details about the latest release, see the [release notes](release-notes.md).
+
+## Get SQL Operations Studio (preview) for Windows
+
+This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip: 
+
+**Installer**
+
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=875602).
+1. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
+**.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=862648).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=875603).
 2. Browse to the downloaded file and extract it.
-3. Run *\sqlops-windows\sqlops.exe*
+3. Run `\sqlops-windows\sqlops.exe`
 
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS
+## Get SQL Operations Studio (preview) for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=862647).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=875604).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
 
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux
+## Get SQL Operations Studio (preview) for Linux
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=862646).
+1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=875607)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=875606)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
+   **Debian Installation:**
    ```bash
    cd ~
-   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~
-   tar -xvf ~/sqlops-linux-<version string>.tar.gz
-   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
-   source ~/.bashrc
+   sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
+
    sqlops
    ```
 
+   **rpm Installation:**
+   ```bash
+   cd ~
+   yum install ./Downloads/sqlops-linux-<version string>.rpm
+
+   sqlops
+   ```
+
+   **tar.gz Installation:**
+   ```bash 
+   cd ~ 
+   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
+   tar -xvf ~/sqlops-linux-<version string>.tar.gz 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
+   source ~/.bashrc 
+   sqlops 
+   ``` 
+
    > [!NOTE]
-   > On Ubuntu and Redhat, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
+   > On Debian, Redhat, and Ubuntu, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
    
+
+   **Debian:** 
+   ```bash
+   sudo apt-get install libuwind8
+   ```
+
+   **Redhat:** 
+   ```bash
+   yum install libXScrnSaver
+   ```
+
    **Ubuntu:** 
    ```bash
    sudo apt-get install libxss1
@@ -56,14 +109,12 @@ ms.workload: "Inactive"
    sudo apt-get install libunwind8
    ```
 
-   **Redhat:** 
-   ```bash
-   yum install libXScrnSaver
-   ```
 
-## Uninstall [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## Uninstall SQL Operations Studio (preview)
 
-To uninstall [!INCLUDE[name-sos-short](../includes/name-sos-short.md)], delete the files.
+If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] using the Windows installer, then uninstall the same way you remove any Windows application.
+
+If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with a .zip or other archive, then simply delete the files.
 
 ## Supported Operating Systems
 
@@ -89,7 +140,8 @@ To uninstall [!INCLUDE[name-sos-short](../includes/name-sos-short.md)], delete t
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-
+## Check for updates
+To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
 
 ## Next Steps
 

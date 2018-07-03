@@ -2,15 +2,14 @@
 title: "Pass a Report Parameter Within a URL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,10 +17,9 @@ helpviewer_keywords:
   - "passing parameters [Reporting Services]"
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "Active"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Pass a Report Parameter Within a URL
   You can pass report parameters to a report by including them in a report URL. These URL parameters are not prefixed because they are passed directly to the report processing engine.  

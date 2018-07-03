@@ -2,14 +2,11 @@
 title: "datetimeoffset (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,10 +23,10 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 caps.latest.revision: 41
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -111,6 +108,9 @@ Some down-level clients do not support the **time**, **date**, **datetime2** and
 ## Converting date and time data
 When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
+### Converting datetimeoffset data type to other date and time types
+This section describes what occurs when a **datetimeoffset** data type is converted to other date and time data types.
+  
 When converting to  **date**, the year, month, and day are copied. The following code shows the results of converting a `datetimeoffset(4)` value to a `date` value.  
   
 ```sql
@@ -128,7 +128,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-If the conversion is to **time(n)**, the our, minute, second, and fractional seconds are copied. The time zone value is truncated. When the precision of the **datetimeoffset(n)** value is greater than the precision of the **time(n)** value, the value is rounded up. The following code shows the results of converting a `datetimeoffset(4)` value to a `time(3)` value.
+If the conversion is to **time(n)**, the hour, minute, second, and fractional seconds are copied. The time zone value is truncated. When the precision of the **datetimeoffset(n)** value is greater than the precision of the **time(n)** value, the value is rounded up. The following code shows the results of converting a `datetimeoffset(4)` value to a `time(3)` value.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -193,9 +193,6 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
   
 --(1 row(s) affected)  
 ```  
-  
-### Converting datetimeoffset data type to other date and time types
-The following table describes what occurs when a **datetimeoffset** data type is converted to other date and time data types.
   
 ### Converting string literals to datetimeoffset
 Conversions from string literals to date and time types are permitted if all parts of the strings are in valid formats. Otherwise, a runtime error is raised. Implicit conversions or explicit conversions that do not specify a style, from date and time types to string literals will be in the default format of the current session. The following table shows the rules for converting a string literal to the **datetimeoffset** data type.

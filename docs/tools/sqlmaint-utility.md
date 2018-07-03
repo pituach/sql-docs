@@ -2,16 +2,15 @@
 title: "sqlmaint Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.component: "sqlmaint"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database maintenance plans [SQL Server]"
   - "sqlmaint utility"
@@ -22,10 +21,9 @@ helpviewer_keywords:
   - "backing up [SQL Server], sqlmaint utility"
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sqlmaint Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

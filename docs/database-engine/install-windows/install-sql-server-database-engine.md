@@ -2,26 +2,24 @@
 title: "Install SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install-windows"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], installing"
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 caps.latest.revision: 45
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Install SQL Server Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications in your enterprise.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports up to 50 instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on a single computer. To create a typical [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, see [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  

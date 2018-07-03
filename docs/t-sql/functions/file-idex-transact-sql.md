@@ -2,14 +2,11 @@
 title: "FILE_IDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-database"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -26,10 +23,9 @@ helpviewer_keywords:
   - "file names [SQL Server], FILE_IDEX"
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +59,7 @@ FILE_IDEX ( file_name )
 ### A. Retrieving the file id of a specified file  
 The following example returns the file ID for the `AdventureWorks_Data` file.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_IDEX('AdventureWorks2012_Data') AS 'File ID';  
@@ -82,7 +78,7 @@ File ID
 ### B. Retrieving the file id when the file name is not known  
 The following example returns the file ID of the `AdventureWorks` log file by selecting the logical file name from the `sys.database_files` catalog view where the file type is equal to `1` (log).  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_IDEX((SELECT TOP (1) name FROM sys.database_files WHERE type = 1)) AS 'File ID';  
@@ -100,7 +96,7 @@ File ID
 ### C. Retrieving the file id of a full-text catalog file  
 The following example returns the file ID of a full-text file by selecting the logical file name from the `sys.database_files` catalog view where the file type is equal to `4` (full-text). This example will return NULL if a full-text catalog does not exist.  
   
-```tsql  
+```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
 AS 'File_ID';  
 ```  

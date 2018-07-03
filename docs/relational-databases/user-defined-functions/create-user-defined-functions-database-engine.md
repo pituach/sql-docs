@@ -1,17 +1,16 @@
----
+﻿---
 title: "Create User-defined Functions (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "udf"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-udf"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SCHEMABINDING clause"
   - "schema-bound functions [SQL Server]"
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "valid statements [SQL Server]"
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create User-defined Functions (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ Requires CREATE FUNCTION permission in the database and ALTER permission on the 
 ##  <a name="Scalar"></a> Scalar Functions  
  The following example creates a multistatement scalar function in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The function takes one input value, a `ProductID`, and returns a single data value, the aggregated quantity of the specified product in inventory.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
     DROP FUNCTION ufnGetInventoryStock;  
 GO  
@@ -95,7 +94,7 @@ END;
   
  The following example uses the `ufnGetInventoryStock` function to return the current inventory quantity for products that have a `ProductModelID` between 75 and 80.  
   
-```t-sql  
+```sql  
 SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply  
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
@@ -104,7 +103,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 ##  <a name="TVF"></a> Table-Valued Functions  
  The following example creates an inline table-valued function in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The function takes one input parameter, a customer (store) ID, and returns the columns `ProductID`, `Name`, and the aggregate of year-to-date sales as `YTD Total` for each product sold to the store.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
     DROP FUNCTION Sales.ufn_SalesByStore;  
 GO  
@@ -125,13 +124,13 @@ RETURN
   
  The following example invokes the function and specifies customer ID 602.  
   
-```t-sql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
  The following example creates a table-valued function in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The function takes a single input parameter, an `EmployeeID` and returns a list of all the employees who report to the specified employee directly or indirectly. The function is then invoked specifying employee ID 109.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
     DROP FUNCTION dbo.ufn_FindReports;  
 GO  

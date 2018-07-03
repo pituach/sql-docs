@@ -1,17 +1,16 @@
----
+﻿---
 title: "Spatial Data Types Overview | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "spatial"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "geometry data type [SQL Server], understanding"
   - "geography data type [SQL Server], spatial data"
@@ -19,19 +18,16 @@ helpviewer_keywords:
   - "spatial data types [SQL Server]"
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Spatial Data Types Overview
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   
 There are two types of spatial data. The **geometry** data type supports planar, or Euclidean (flat-earth), data. The **geometry** data type both conforms to the Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 and is compliant with SQL MM (ISO standard).
 In addition, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the **geography** data type, which stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.
-
-> [!IMPORTANT]  
->  For a detailed description and examples of spatial features introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], including enhancements to the spatial data types, download the white paper, [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).  
 
 ##  <a name="objects"></a> Spatial Data Objects  
 The **geometry** and **geography** data types support sixteen spatial data objects, or instance types. However, only eleven of these instance types are *instantiable*; you can create and work with these instances (or instantiate them) in a database. These instances derive certain properties from their parent data types that distinguish them as **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** or as multiple **geometry** or **geography** instances in a **GeometryCollection**. **Geography** type has an additional instance type, **FullGlobe**.  
@@ -103,11 +99,8 @@ Methods operating on circular arc segment types use straight line segments to ap
 >  If Z values are given for circular arc segments then they must be the same for all points in the circular arc segment for it to be accepted for input. For example: `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` is accepted, but `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` is not accepted.  
 
 ### LineString and CircularString comparison  
-The following diagram shows identical isosceles triangles (triangle A uses line segments to define the triangle and triangle B uses circular arc segments to defined the triangle):  
-
-![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif)
-This example shows how to store the above isosceles triangles using both a **LineString** instance and **CircularString** instance:  
-```tsql
+This example shows how to store identical isosceles triangles using both a **LineString** instance and **CircularString** instance:  
+```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
 SET @g1 = geometry::STGeomFromText('LINESTRING(1 1, 5 1, 3 5, 1 1)', 0);
@@ -122,27 +115,23 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 Notice that a **CircularString** instance requires seven points to define the triangle, but a **LineString** instance requires only four points to define the triangle. The reason for this is that a **CircularString** instance stores circular arc segments and not line segments. So the sides of the triangle stored in the **CircularString** instance are ABC, CDE, and EFA whereas the sides of the triangle stored in the **LineString** instance are AC, CE, and EA.  
 
 Consider the following code snippet:  
-```tsql
+```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-This snippet will produce the following results:  
+This snippet producse the following results:  
 ```
 LS LengthCS Length
 5.65685…6.28318…
 ```
 
-The following illustration shows how each type is stored (red line shows **LineString**`@g1`, blue line shows **CircularString**`@g2`):  
-
-![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
-
-As the illustration above shows, **CircularString** instances use fewer points to store curve boundaries with greater precision than **LineString** instances. **CircularString** instances are useful for storing circular boundaries like a twenty-mile search radius from a specific point. **LineString** instances are good for storing boundaries that are linear like a square city block.  
+**CircularString** instances use fewer points to store curve boundaries with greater precision than **LineString** instances. **CircularString** instances are useful for storing circular boundaries like a twenty-mile search radius from a specific point. **LineString** instances are good for storing boundaries that are linear like a square city block.  
 
 ### LineString and CompoundCurve comparison  
 The following code examples show how to store the same figure using **LineString** and **CompoundCurve** instances:
-```tsql
+```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
@@ -151,7 +140,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 or  
 
 In the examples above, either a **LineString** instance or a **CompoundCurve** instance could store the figure.  This next example uses a **CompoundCurve** to store a pie slice:  
-```tsql
+```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
 
@@ -159,7 +148,7 @@ A **CompoundCurve** instance can store the circular arc segment (2 2, 1 3, 0 2) 
 
 ### CircularString and CompoundCurve comparison  
 The following code example shows how the pie slice can be stored in a **CircularString** instance:  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
 SELECT @g.ToString(), @g.STLength();
@@ -167,12 +156,12 @@ SELECT @g.ToString(), @g.STLength();
 
 To store the pie slice using a **CircularString** instance requires that three points be used for each line segment.  If an intermediate point is not known, it either has to be calculated or the endpoint of the line segment has to be doubled as the following snippet shows:  
 
-```tsql
+```sql
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
 **CompoundCurve** instances allow both **LineString** and **CircularString** components so that only two points to the line segments of the pie slice need to be known.  This code example shows how to use a **CompoundCurve** to store the same figure:  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246), (-3 6.3246, 0 0, 3 6.3246))');
 SELECT @g.ToString(), @g.STLength();

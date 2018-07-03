@@ -2,14 +2,10 @@
 title: "sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "dmv's"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 applies_to: 
@@ -25,10 +21,9 @@ helpviewer_keywords:
   - "sys.dm_db_incremental_stats_properties"
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +69,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  This behavior allows for the safe usage of `sys.dm_db_incremental_stats_properties` when cross applied to rows in views such as `sys.objects` and `sys.stats`. This method can return properties for the statistics that correspond to each partition. To see the properties for the merged statistics combined across all partitions, use the sys.dm_db_stats_properties instead. 
 
-  Statistics update date is stored in the statistics blob object together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, the date is not available, and the *last_updated* column is NULL. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
+Statistics update date is stored in the [statistics blob object](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, the date is not available, and the *last_updated* column is NULL. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
 
 ## Permissions  
  Requires that the user has select permissions on statistics columns or the user owns the table or the user is a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.  
@@ -84,12 +79,11 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 ### A. Simple example
 The following example returns the statistics for the `PartitionTable` table described in the topic [Create Partitioned Tables and Indexes](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md).
 
-```t-sql
+```sql
 SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'), 1);
 ``` 
 
 For additional usage suggestions, see  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md).
-  
   
 ## See Also  
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   

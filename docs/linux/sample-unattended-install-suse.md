@@ -6,23 +6,20 @@ ms.author: edmaca
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
+ms.prod: sql
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
-ms.workload: "Inactive"
+ms.custom: "sql-linux"
+ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This sample Bash script installs SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12 SP2 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]
-> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quick start tutorial for SLES](quickstart-install-connect-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for SLES](quickstart-install-connect-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
@@ -36,7 +33,7 @@ This sample Bash script installs SQL Server 2017 on SUSE Linux Enterprise Server
 ## Sample script
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

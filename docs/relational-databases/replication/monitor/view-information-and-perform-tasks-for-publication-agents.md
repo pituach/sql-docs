@@ -2,26 +2,23 @@
 title: "View Information and Perform Tasks for Publication Agents | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "replication"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "agents [SQL Server replication], viewing information"
   - "viewing replication agent information"
   - "agents [SQL Server replication], tasks in Replication Monitor"
 ms.assetid: 2a420da2-66f4-4650-9bdd-1992221ed3fd
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # View Information and Perform Tasks for Publication Agents
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

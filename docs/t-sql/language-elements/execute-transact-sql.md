@@ -1,15 +1,12 @@
----
+﻿---
 title: "EXECUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -34,10 +31,10 @@ helpviewer_keywords:
   - "EXECUTE statement"
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 caps.latest.revision: 104
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Active"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 # EXECUTE (Transact-SQL)
@@ -183,7 +180,7 @@ Execute a character string
   
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
@@ -355,7 +352,7 @@ Execute a character string
   
  Changes in database context last only until the end of the EXECUTE statement. For example, after the `EXEC` in this following statement is run, the database context is master.  
   
-```tsql  
+```sql  
 USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
 ```  
   
@@ -466,7 +463,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
 ### E. Using EXECUTE with a stored procedure variable  
  The following example creates a variable that represents a stored procedure name.  
   
-```tsql  
+```sql  
 DECLARE @proc_name varchar(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  

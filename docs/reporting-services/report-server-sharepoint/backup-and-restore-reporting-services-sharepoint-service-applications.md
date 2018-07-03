@@ -2,21 +2,19 @@
 title: "Back up and restore Reporting Services SharePoint service applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "report-server-sharepoint"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "Inactive"
+ms.topic: conceptual
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Back up and restore Reporting Services SharePoint service applications
 

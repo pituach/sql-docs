@@ -1,17 +1,14 @@
----
+﻿---
 title: "Save an Execution Plan in XML Format | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/21/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "performance"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XML query plans [SQL Server]"
   - "opening execution plans"
@@ -20,10 +17,10 @@ helpviewer_keywords:
   - "saving execution plans"
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Save an Execution Plan in XML Format
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,14 +34,14 @@ ms.workload: "Inactive"
   
 2.  Turn [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) on with the following statement:  
   
-    ```t-sql  
+    ```sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
      To turn [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) on, use the following statement:  
   
-    ```t-sql  
+    ```sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
@@ -55,7 +52,7 @@ ms.workload: "Inactive"
   
 3.  Execute a query. Example:  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  

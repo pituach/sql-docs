@@ -1,20 +1,17 @@
 ---
-title: "RevoScaleR | Microsoft Docs"
-ms.custom: ""
-ms.prod: sql-non-specified
-ms.date: "11/29/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: RevoScaleR package in SQL Server Machine Learning | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 
 # RevoScaleR
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 RevoScaleR is a package of machine learning functions, provided by Microsoft, that supports data science at scale.
 

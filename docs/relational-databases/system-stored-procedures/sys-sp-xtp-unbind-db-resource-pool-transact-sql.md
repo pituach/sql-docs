@@ -2,14 +2,12 @@
 title: "sys.sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -24,10 +22,9 @@ helpviewer_keywords:
   - "sys.sp_xtp_unbind_db_resource_pool"
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'database_name'  
 ```  
   
@@ -61,7 +58,7 @@ Database 'Hekaton_DB' does not have a binding to a resource pool.
 ## Example  
  The following code unbinds the database Hekaton_DB from the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] resource pool it is bound to.  If Hekaton_DB is not currently bound to a [!INCLUDE[hek_2](../../includes/hek-2-md.md)] resource pool, a message is given. The database must be restarted for the unbinding to take effect.  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'  
 ```  
   

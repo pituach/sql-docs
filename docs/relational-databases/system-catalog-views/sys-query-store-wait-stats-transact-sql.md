@@ -1,22 +1,18 @@
----
+﻿---
 title: "sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/21/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "system-catalog-views"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
-  - "SYS.QUERY_STORE_WAIT_STATS_TSQL"
-  - "QUERY_STORE_WAIT_STATS_TSQL"
-  - "SYS.QUERY_STORE_WAIT_STATS"
-  - "QUERY_STORE_WAIT_STATS"
+  - "sys.query_store_wait_stats"
+  - "query_store_wait_stats"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -26,8 +22,8 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 caps.latest.revision: 18
 author: "AndrejsAnt"
 ms.author: "AndrejsAnt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -43,7 +39,7 @@ ms.workload: "Inactive"
 |**wait_category_desc**|**nvarchar(128)**|For textual description of the wait category field please review the table below.|
 |**execution_type**|**tinyint**|Determines type of query execution:<br /><br /> 0 – Regular execution (successfully finished)<br /><br /> 3 – Client initiated aborted execution<br /><br /> 4 -  Exception aborted execution|  
 |**execution_type_desc**|**nvarchar(128)**|Textual description of the execution type field:<br /><br /> 0 –  Regular<br /><br /> 3 –  Aborted<br /><br /> 4 -  Exception|  
-|**total_query_wait_time_ms**|**bigint**|Total CPU wait time for the query plan within the aggregation interval and wait category (reported in microseconds).|
+|**total_query_wait_time_ms**|**bigint**|Total CPU wait time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**avg_query_wait_time_ms**|**float**|Average wait duration for the query plan per execution within the aggregation interval and wait category (reported in milliseconds).|
 |**last_query_wait_time_ms**|**bigint**|Last wait duration for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**min_query_wait_time_ms**|**bigint**|Minimum CPU wait time for the query plan within the aggregation interval and wait category (reported in milliseconds).|

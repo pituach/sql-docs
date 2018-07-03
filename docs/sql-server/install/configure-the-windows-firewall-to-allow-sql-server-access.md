@@ -2,16 +2,12 @@
 title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: "install"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
+ms.technology: install
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows Firewall ports"
   - "WMI firewall ports"
@@ -27,24 +23,24 @@ helpviewer_keywords:
   - "netsh to open firewall ports"
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-ms.workload: "Active"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
  > For content related to previous versions of SQL Server, see [Configure the Windows Firewall to Allow SQL Server Access](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
 
 Firewall systems help prevent unauthorized access to computer resources. If a firewall is turned on but not correctly configured, attempts to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might be blocked.  
   
-To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through a firewall, you must configure the firewall on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The firewall is a component of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. You can also install a firewall from another company. This topic discusses how to configure the Windows firewall, but the basic principles apply to other firewall programs.  
+To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through a firewall, you must configure the firewall on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The firewall is a component of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. You can also install a firewall from another company. This article discusses how to configure the Windows firewall, but the basic principles apply to other firewall programs.  
   
 > [!NOTE]  
->  This topic provides an overview of firewall configuration and summarizes information of interest to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator. For more information about the firewall and for authoritative firewall information, see the firewall documentation, such as [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
+>  This article provides an overview of firewall configuration and summarizes information of interest to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator. For more information about the firewall and for authoritative firewall information, see the firewall documentation, such as [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
   
- Users familiar with the **Windows Firewall** item in Control Panel and with the Windows Firewall with Advanced Security Microsoft Management Console (MMC) snap-in and who know which firewall settings they want to configure can move directly to the topics in the following list:  
+ Users familiar with the **Windows Firewall** item in Control Panel and with the Windows Firewall with Advanced Security Microsoft Management Console (MMC) snap-in and who know which firewall settings they want to configure can move directly to the articles in the following list:  
   
 -   [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
@@ -61,7 +57,7 @@ To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 -   An administrator configures exceptions to the firewall. This allows either access to specified programs running on your computer, or access to specified connection ports on your computer. In this case, the computer accepts unsolicited incoming traffic when acting as a server, a listener, or a peer. This is the type of configuration that must be completed to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Choosing a firewall strategy is more complex than just deciding if a given port should be open or closed. When designing a firewall strategy for your enterprise, make sure that you consider all the rules and configuration options available to you. This topic does not review all the possible firewall options. We recommend that you review the following documents:  
+ Choosing a firewall strategy is more complex than just deciding if a given port should be open or closed. When designing a firewall strategy for your enterprise, make sure that you consider all the rules and configuration options available to you. This article does not review all the possible firewall options. We recommend that you review the following documents:  
   
  [Windows Firewall with Advanced Security Getting Started Guide](http://go.microsoft.com/fwlink/?LinkId=116080)  
   
@@ -80,11 +76,11 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
 
 -  **Microsoft Management Console (MMC)**  
   
-     The Windows Firewall with Advanced Security MMC snap-in lets you configure more advanced firewall settings. This snap-in presents most of the firewall options in an easy-to-use manner, and presents all firewall profiles. For more information, see [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc) later in this topic.  
+     The Windows Firewall with Advanced Security MMC snap-in lets you configure more advanced firewall settings. This snap-in presents most of the firewall options in an easy-to-use manner, and presents all firewall profiles. For more information, see [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc) later in this article.  
   
 -   **netsh**  
   
-     The **netsh.exe** tool can be used by an administrator to configure and monitor Windows-based computers at a command prompt or using a batch file**.** By using the **netsh** tool, you can direct the context commands you enter to the appropriate helper, and the helper then performs the command. A helper is a Dynamic Link Library (.dll) file that extends the functionality of the **netsh** tool by providing configuration, monitoring, and support for one or more services, utilities, or protocols. All operating systems that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] have a firewall helper. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] also has an advanced firewall helper called **advfirewall**. The details of using **netsh** are not discussed in this topic. However, many of the configuration options described can be configured by using **netsh**. For example, run the following script at a command prompt to open TCP port 1433:  
+     The **netsh.exe** tool can be used by an administrator to configure and monitor Windows-based computers at a command prompt or using a batch file**.** By using the **netsh** tool, you can direct the context commands you enter to the appropriate helper, and the helper then performs the command. A helper is a Dynamic Link Library (.dll) file that extends the functionality of the **netsh** tool by providing configuration, monitoring, and support for one or more services, utilities, or protocols. All operating systems that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] have a firewall helper. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] also has an advanced firewall helper called **advfirewall**. The details of using **netsh** are not discussed in this article. However, many of the configuration options described can be configured by using **netsh**. For example, run the following script at a command prompt to open TCP port 1433:  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -112,7 +108,7 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
   
 |Scenario|Port|Comments|  
 |--------------|----------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default instance running over TCP|TCP port 1433|This is the most common port allowed through the firewall. It applies to routine connections to the default installation of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or a named instance that is the only instance running on the computer. (Named instances have special considerations. See [Dynamic Ports](#BKMK_dynamic_ports) later in this topic.)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default instance running over TCP|TCP port 1433|This is the most common port allowed through the firewall. It applies to routine connections to the default installation of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or a named instance that is the only instance running on the computer. (Named instances have special considerations. See [Dynamic Ports](#BKMK_dynamic_ports) later in this article.)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named instances in the default configuration|The TCP port is a dynamic port determined at the time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] starts.|See the discussion below in the section [Dynamic Ports](#BKMK_dynamic_ports). UDP port 1434 might be required for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service when you are using named instances.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named instances when they are configured to use a fixed port|The port number configured by the administrator.|See the discussion below in the section [Dynamic Ports](#BKMK_dynamic_ports).|  
 |Dedicated Admin Connection|TCP port 1434 for the default instance. Other ports are used for named instances. Check the error log for the port number.|By default, remote connections to the Dedicated Administrator Connection (DAC) are not enabled. To enable remote DAC, use the Surface Area Configuration facet. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).|  

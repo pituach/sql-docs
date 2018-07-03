@@ -1,15 +1,12 @@
----
+﻿---
 title: "DROP DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -28,10 +25,10 @@ helpviewer_keywords:
   - "database removal [SQL Server], DROP DATABASE statement"
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 caps.latest.revision: 83
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -94,7 +91,10 @@ DROP DATABASE database_name [;]
   
  The DROP DATABASE statement must run in autocommit mode and is not allowed in an explicit or implicit transaction. Autocommit mode is the default transaction management mode.  
   
- You cannot drop a database currently being used. This means open for reading or writing by any user. To remove users from the database, use ALTER DATABASE to set the database to SINGLE_USER.  
+ You cannot drop a database currently being used. This means open for reading or writing by any user. One way to remove users from the database is to use ALTER DATABASE to set the database to SINGLE_USER. 
+ 
+ >[!Warning] 
+ > This is not a fail-proof approach, since first consecutive connection made by any thread will receive the SINGLE_USER thread, causing your connection to fail. Sql server does not provide a built-in way to drop databases under load.
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Any database snapshots on a database must be dropped before the database can be dropped.  

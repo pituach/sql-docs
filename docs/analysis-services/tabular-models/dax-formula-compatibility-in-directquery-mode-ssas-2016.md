@@ -1,26 +1,16 @@
 ---
-title: "DAX Formula Compatibility in DirectQuery Mode (SSAS 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/06/2017"
-ms.prod: "analysis-services"
-ms.prod_service: "analysis-services, azure-analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+title: "DAX formula compatibility in DirectQuery mode | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# DAX Formula Compatibility in DirectQuery Mode 
+# DAX formula compatibility in DirectQuery mode 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 For tabular 1200 and higher models in DirectQuery mode, many functional limitations in earlier versions no longer apply. For DAX formulas in-particular:
 
@@ -346,7 +336,7 @@ In an in-memory model, the result terminates at the last string character, with 
 
 
 ## See also  
-[DirectQuery Mode (SSAS Tabular)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery Mode](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 
