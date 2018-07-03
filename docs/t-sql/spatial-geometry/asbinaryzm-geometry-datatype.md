@@ -2,14 +2,11 @@
 title: "AsBinaryZM (geometry DataType) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -18,10 +15,9 @@ helpviewer_keywords:
   - "AsBinaryZM geometry"
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # AsBinaryZM (geometry DataType)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +40,7 @@ Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representat
   
 ## Examples  
   
-```tsql  
+```sql  
 DECLARE @g1 GEOMETRY = 'Point(1 1 2 3)';  
   
 SELECT @g1.STAsBinary();  

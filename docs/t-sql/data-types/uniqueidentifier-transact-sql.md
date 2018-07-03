@@ -1,15 +1,12 @@
----
+﻿---
 title: "uniqueidentifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/1/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
-ms.service: ""
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +20,10 @@ helpviewer_keywords:
   - "GUIDs [SQL Server]"
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # uniqueidentifier (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -54,21 +51,21 @@ These tools and features do not support the `uniqueidentifier` data type:
 ## Examples  
 The following example converts a `uniqueidentifier` value to a `char` data type.
   
-```t-sql
+```sql
 DECLARE @myid uniqueidentifier = NEWID();  
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
 The following example demonstrates the truncation of data when the value is too long for the data type being converted to. Because the **uniqueidentifier** type is limited to 36 characters, the characters that exceed that length are truncated.
   
-```t-sql
+```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
 SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```t-sql
+```sql
 String                                       TruncatedValue  
 -------------------------------------------- ------------------------------------  
 0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong    0E984725-C51C-4BF4-9960-E1C80E27ABA0  

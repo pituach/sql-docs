@@ -2,14 +2,11 @@
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -50,22 +47,23 @@ helpviewer_keywords:
   - "maximum number of bytes per row"
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 caps.latest.revision: 256
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Active"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]   
 >  For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] syntax, see [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Simple Syntax  
   
 ```  
 --Simple CREATE TABLE Syntax (common if not using options)  
@@ -75,7 +73,7 @@ CREATE TABLE
 [ ; ]  
 ```  
   
-## Syntax  
+## Full Syntax  
   
 ```  
 --Disk-Based CREATE TABLE Syntax  
@@ -1083,7 +1081,7 @@ For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space
 
 - Session A creates a global temp table ##test in Azure SQL Database testdb1 and adds 1 row
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1101,7 +1099,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - Session B connects to Azure SQL Database testdb1 and can access table ##test created by session A
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1109,7 +1107,7 @@ SELECT * FROM ##test
 
 - Session C connects to another database in Azure SQL Database testdb2 and wants to access ##test created in testdb1. This select fails due to the database scope for the global temp tables 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1118,7 +1116,7 @@ Invalid object name '##test'
 
 - Addressing system object in Azure SQL Database tempdb from current user database testdb1
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1257,7 +1255,9 @@ SELECT * FROM tempdb.sys.database_files
   
 ## Permissions  
  Requires CREATE TABLE permission in the database and ALTER permission on the schema in which the table is being created.  
-  
+ 
+ If any columns in the CREATE TABLE statement are defined to be of a user-defined type, REFERENCES permission on the user-defined type is required. 
+ 
  If any columns in the CREATE TABLE statement are defined to be of a CLR user-defined type, either ownership of the type or REFERENCES permission on it is required.  
   
  If any columns in the CREATE TABLE statement have an XML schema collection associated with them, either ownership of the XML schema collection or REFERENCES permission on it is required.  
@@ -1557,7 +1557,7 @@ CREATE SCHEMA History
 GO  
 CREATE TABLE dbo.Department   
 (  
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,   
+    DepartmentNumber char(10) NOT NULL PRIMARY KEY NONCLUSTERED,   
     DepartmentName varchar(50) NOT NULL,   
     ManagerID int  NULL,   
     ParentDepartmentNumber char(10) NULL,   

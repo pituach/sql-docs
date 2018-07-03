@@ -1,10 +1,9 @@
----
+﻿---
 title: "Tutorial: Getting Started with the Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/21/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "tutorial"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "connecting tutorial [SQL Server]"
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Tutorial: Getting Started with the Database Engine
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

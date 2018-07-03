@@ -2,9 +2,8 @@
 title: "sp_changearticle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -21,10 +20,9 @@ helpviewer_keywords:
   - "sp_changearticle"
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 caps.latest.revision: 77
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "Inactive"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ---
 # sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -216,7 +214,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Within an existing publication, you can use **sp_changearticle** to change an article without having to drop and re-create the entire publication.  
   
 > [!NOTE]  
->  When changing the value of *schema_option*, the system does not perform a bitwise update. This means that when you set *schema_option* using **sp_changearticle**, existing bit settings may be turned off. To retain the existing settings, you should perform [& (Bitwise AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md) between the value that you are setting and the current value of *schema_option*, which can be determined by executing [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
+>  When changing the value of *schema_option*, the system does not perform a bitwise update. This means that when you set *schema_option* using **sp_changearticle**, existing bit settings may be turned off. To retain the existing settings, you should perform [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) between the value that you are setting and the current value of *schema_option*, which can be determined by executing [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
   
 ## Valid Schema Options  
  The following table describes the allowable values of *schema_option* based upon the replication type (shown across the top) and the article type (shown down the first column).  

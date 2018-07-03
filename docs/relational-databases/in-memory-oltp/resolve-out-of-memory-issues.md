@@ -1,23 +1,20 @@
 ---
 title: "Resolve Out Of Memory Issues | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/24/2017"
-ms.prod: "sql-non-specified"
+ms.date: "12/21/2017"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "in-memory-oltp"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine-imoltp"
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # Resolve Out Of Memory issues
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +31,9 @@ ms.workload: "On Demand"
 |[Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs)|What to keep in mind when using In-Memory OLTP in a virtualized environment.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Resolve database restore failures due to OOM  
- When you attempt to restore a database you may get the error message: “Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'.” This indicates that the server does not have enough available memory for restoring the database.
+ When you attempt to restore a database you may get the error message: “Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'.” This indicates that the server does not have enough available memory for restoring the database. 
    
-The server you restore a database to must have enough available memory for the memory-optimized tables in the database backup, otherwise the database will not come online.  
+The server you restore a database to must have enough available memory for the memory-optimized tables in the database backup, otherwise the database will not come online, and will be marked as suspect.  
   
 If the server does have enough physical memory, but you are still seeing this error, it could be that other processes are using too much memory or a configuration issue causes not enough memory to be available for restore. For this class of issues, use the following measures to make more memory available to the restore operation: 
   
@@ -50,7 +47,7 @@ If the server does have enough physical memory, but you are still seeing this er
     > If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT to the same value as MAX_MEMORY_PERCENT.   
     > See the topic [Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs) for more information.  
   
-    ```tsql  
+    ```sql  
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -113,7 +110,7 @@ This code snippet changes MAX_MEMORY_PERCENT for the resource pool PoolHk to 70%
 >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value.   
 > See the topic [Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs) for more information.  
   
-```tsql  
+```sql  
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
   

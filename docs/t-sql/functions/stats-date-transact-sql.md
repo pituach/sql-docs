@@ -1,15 +1,12 @@
----
+﻿---
 title: "STATS_DATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "t-sql|functions"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,10 +22,10 @@ helpviewer_keywords:
   - "stats update date"
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "craigg"
-ms.workload: "On Demand"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # STATS_DATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,12 +50,12 @@ STATS_DATE ( object_id , stats_id )
  ID of the statistics object.  
   
 ## Return Types  
- Returns **datetime** on success. Returns **NULL** on error.  
+ Returns **datetime** on success. Returns **NULL** if a statistics blob was not created.  
   
 ## Remarks  
  System functions can be used in the select list, in the WHERE clause, and anywhere an expression can be used.  
  
- Statistics update date is stored in the statistics blob object together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, and the date is not available. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
+ Statistics update date is stored in the [statistics blob object](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, and the date is not available. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
  
  If statistics correspond to an index, the *stats_id* value in the [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) catalog view is the same as the *index_id* value in the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view.
   
@@ -70,7 +67,7 @@ STATS_DATE ( object_id , stats_id )
 ### A. Return the dates of the most recent statistics for a table  
  The following example returns the date of the most recent update for each statistics object on the `Person.Address` table.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name AS stats_name,   
@@ -82,7 +79,7 @@ GO
   
  If statistics correspond to an index, the *stats_id* value in the [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) catalog view is the same as the *index_id* value in the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view, and the following query returns the same results as the preceding query. If statistics do not correspond to an index, they are in the sys.stats results but not in the sys.indexes results.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name AS index_name,   
@@ -97,7 +94,7 @@ GO
 ### B. Learn when a named statistics was last updated  
  The following example creates statistics on the LastName column of the DimCustomer table. It then runs a query to show the date of the statistics. Then it udpates the statistics and runs the query again to show the updated date.  
   
-```t-sql
+```sql
 --First, create a statistics object  
 USE AdventureWorksPDW2012;  
 GO  
@@ -132,7 +129,7 @@ GO
 ### C. View the date of the last update for all statistics on a table  
  This example returns the date for when each statistics object on the DimCustomer table was last updated.  
   
-```t-sql  
+```sql  
 --Return the dates all statistics on the table were last updated.  
 SELECT stats_id, name AS stats_name,   
     STATS_DATE(object_id, stats_id) AS statistics_date  
@@ -143,7 +140,7 @@ GO
   
  If statistics correspond to an index, the *stats_id* value in the [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) catalog view is the same as the *index_id* value in the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view, and the following query returns the same results as the preceding query. If statistics do not correspond to an index, they are in the sys.stats results but not in the sys.indexes results.  
   
-```t-sql  
+```sql  
 USE AdventureWorksPDW2012;  
 GO  
 SELECT name AS index_name,   

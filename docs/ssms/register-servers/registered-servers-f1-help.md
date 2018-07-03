@@ -2,14 +2,11 @@
 title: "Registered Servers F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "ssms-registration"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,10 +15,9 @@ helpviewer_keywords:
   - "SQL Server Management Studio Help [SQL Server], registered servers"
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Registered Servers F1 Help
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

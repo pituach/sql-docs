@@ -2,22 +2,19 @@
 title: "Install or Uninstall the Reporting Services Add-in for SharePoint | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/17/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.service: ""
-ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
+
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "On Demand"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 
 # Install or Uninstall the Reporting Services Add-in for SharePoint

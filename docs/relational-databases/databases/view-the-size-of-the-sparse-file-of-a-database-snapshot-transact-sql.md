@@ -1,9 +1,8 @@
 ---
 title: "View the Size of the Sparse File of a Database Snapshot (Transact-SQL) | Microsoft Docs"
 ms.date: "07/28/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "databases"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -11,7 +10,7 @@ ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server database snapshots], sparse files"
   - "space [SQL Server], sparse files"
@@ -22,10 +21,9 @@ helpviewer_keywords:
   - "space [SQL Server], database snapshots"
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # View the Size of the Sparse File of a Database Snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +69,7 @@ ms.workload: "Inactive"
 ## Example
 The following script will show the size on disk in kilobytes for each sparse file.  The script will also show the maximum size in megabytes to which a sparse file can grow.  Execute the Transact-SQL script in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-```tsql
+```sql
 SELECT  DB_NAME(sd.source_database_id) AS [SourceDatabase], 
 		sd.name AS [Snapshot],
 		mf.name AS [Filename], 

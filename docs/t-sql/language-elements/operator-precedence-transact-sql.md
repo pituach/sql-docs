@@ -2,14 +2,11 @@
 title: "Operator Precedence (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: t-sql
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -21,10 +18,9 @@ helpviewer_keywords:
   - "precedence [SQL Server], operators"
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Operator Precedence (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +33,7 @@ ms.workload: "On Demand"
 |-----------|---------------|  
 |1|~ (Bitwise NOT)|  
 |2|* (Multiplication), / (Division), % (Modulus)|  
-|3|+ (Positive), - (Negative), + (Addition), (+ Concatenation), - (Subtraction), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
+|3|+ (Positive), - (Negative), + (Addition), + (Concatenation), - (Subtraction), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
 |4|=, >, \<, >=, <=, <>, !=, !>, !< (Comparison operators)|  
 |5|NOT|  
 |6|AND|  

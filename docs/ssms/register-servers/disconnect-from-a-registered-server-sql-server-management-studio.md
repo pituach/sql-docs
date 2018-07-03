@@ -2,16 +2,13 @@
 title: "Disconnect from a Registered Server (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "ssms-registration"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: ssms
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Registered Servers [SQL Server], connections"
   - "connections [SQL Server], registered servers"
@@ -19,10 +16,9 @@ helpviewer_keywords:
   - "disconnecting registered servers [SQL Server]"
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-ms.workload: "Inactive"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Disconnect from a Registered Server (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

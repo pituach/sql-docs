@@ -1,25 +1,16 @@
 ---
-title: "Using R functions with SQL Server data (R in SQL quickstart) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-  - "SQL"
-ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: 8
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "On Demand"
+title: Using R functions with SQL Server data (R in SQL quickstart) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Using R functions with SQL Server data (R in SQL quickstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Now that you're familiar with basic operations, it's time to have some fun with R. For example, many advanced statistical functions might be complicated to implement using T-SQL, but require only a single line of R code.  With R Services, it's easy to embed R utility scripts in a stored procedure.
 
@@ -76,12 +67,6 @@ Now that you've wrapped the R function in a stored procedure, you can easily cal
 ```sql
 EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
-
-## Related resources
-
-+ Would you like to install more R packages, to get more advanced statistical functions? See [Installing and managing R packages](../r/installing-and-managing-r-packages.md).
-
-+ To help you convert your standalone R code to a format that can be easily parameterized using SQL Server stored procedures, the Microsoft R team has provided a new R package, **sqlrutils**. For more information, see [How to Create a stored procedure using sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 
 ## Use R utility functions for troubleshooting
 

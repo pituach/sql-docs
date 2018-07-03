@@ -1,23 +1,21 @@
 ---
 title: Develop applications for SQL Server on Linux | Microsoft Docs
 description: 
-author: sanagama 
-ms.author: sanagama 
-manager: jhubbard
+author: rothja 
+ms.author: jroth 
+manager: craigg
 ms.date: 11/17/2017
 ms.topic: article
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
-ms.service: ""
-ms.component: sql-linux
+ms.prod: sql
+ms.component: ""
+ms.custom: "sql-linux"
 ms.suite: "sql"
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.workload: "On Demand"
 ---
 # How to get started developing applications for SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 You can create applications that connect to and use SQL Server 2017 on Linux from a variety of programming languages, such as C#, Java, Node.js, PHP, Python, Ruby, and C++. You can also use popular web frameworks and Object Relational Mapping (ORM) frameworks.
 
@@ -51,11 +49,11 @@ Tools that currently run on Windows such as SSMS, SSDT, and PowerShell, also wor
 
 See the following topics for more information:
 
-- [SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
 - [SQL PowerShell](sql-server-linux-manage-powershell.md)
 
-> [!Note] 
+> [!Note]
 > Make sure that you are using the latest versions of these tools for the best experience.
 
 ## Use new SQL tools for Linux
@@ -72,7 +70,7 @@ You can also use new command-line tools that are native for Linux. These tools i
 
 ## Next steps
 
-To get started, install SQL Server on Linux using one of the following quick start tutorials:
+To get started, install SQL Server on Linux using one of the following quickstarts:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

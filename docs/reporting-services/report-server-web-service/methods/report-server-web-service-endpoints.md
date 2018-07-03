@@ -2,15 +2,14 @@
 title: "Report Server Web Service Endpoints | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.service: ""
 ms.component: "report-server-web-service"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -23,10 +22,9 @@ helpviewer_keywords:
   - "Report Server Web service, endpoints"
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 caps.latest.revision: 26
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "On Demand"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Report Server Web Service Endpoints
   The Report Server Web service provides several endpoints for managing a report server as well as executing and navigating reports.  

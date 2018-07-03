@@ -2,26 +2,20 @@
 title: "PolyBase scale-out groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.service: ""
-ms.component: "polybase"
+ms.prod: sql
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine-polybase"
+ms.technology: polybase
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "PolyBase"
   - "PolyBase, scale-out groups"
   - "scale-out PolyBase"
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: 20
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # PolyBase scale-out groups
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +31,7 @@ ms.workload: "On Demand"
  The head node contains the SQL Server instance to which PolyBase queries are submitted. Each PolyBase group can have only one head node. A head node is a logical group of SQL Database Engine, PolyBase Engine and PolyBase Data Movement Service on the SQL Server instance.  
   
 ### Compute node  
- A compute node contains the SQL Server instance that assists with scale-out query processing on external data. A compute node is a logical group of SQL Server and the PolyBase data movement service on the SQL Server instance. A PolyBase group can have multiple compute nodes.  
+ A compute node contains the SQL Server instance that assists with scale-out query processing on external data. A compute node is a logical group of SQL Server and the PolyBase data movement service on the SQL Server instance. A PolyBase group can have multiple compute nodes.  The head node and the compute nodes must all run the same version of SQL Server.
   
 ### Distributed query processing  
  PolyBase queries are submitted to the SQL Server on the head node. The part of the query that refers to external tables is handed-off to the PolyBase engine.  
@@ -59,7 +53,7 @@ ms.workload: "On Demand"
   
 ### Steps  
   
-1.  Install SQL Server with PolyBase on N machines.  
+1.  Install the same version of SQL Server with PolyBase on N machines.  
   
 2.  Select one SQL Server instance as the head node. A head node can only be designated on an instance running SQL Server Enterprise.  
   

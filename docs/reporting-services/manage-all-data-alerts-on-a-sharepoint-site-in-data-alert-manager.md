@@ -2,15 +2,14 @@
 title: "Manage All Data Alerts on a SharePoint Site in Data Alert Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/17/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,10 +17,9 @@ helpviewer_keywords:
   - "managing, data alerts"
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-ms.workload: "On Demand"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Manage All Data Alerts on a SharePoint Site in Data Alert Manager
 

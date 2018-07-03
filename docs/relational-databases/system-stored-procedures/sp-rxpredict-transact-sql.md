@@ -2,14 +2,13 @@
 title: "sp_rxPredict | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine"
-ms.service: ""
 ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,8 +20,7 @@ helpviewer_keywords:
   - "sp_rxPredict procedure"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
-ms.workload: "Inactive"
+manager: craigg
 ---
 # sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -1,15 +1,12 @@
----
+﻿---
 title: "sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
-ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: system-objects
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,10 +20,10 @@ helpviewer_keywords:
   - "sys.dm_db_stats_properties"
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.workload: "On Demand"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
  This behavior allows for the safe usage of **sys.dm_db_stats_properties** when cross applied to rows in views such as **sys.objects** and **sys.stats**.  
  
-Statistics update date is stored in the statistics blob object together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, the date is not available, and the *last_updated* column is NULL. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
+Statistics update date is stored in the [statistics blob object](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, the date is not available, and the *last_updated* column is NULL. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
   
 ## Permissions  
  Requires that the user has select permissions on statistics columns or the user owns the table or the user is a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.  
@@ -80,14 +77,14 @@ Statistics update date is stored in the statistics blob object together with the
 ### A. Simple example
 The following example returns the statistics for the `Person.Person` table in the AdventureWorks database.
 
-```t-sql
+```sql
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);
 ``` 
   
 ### B. Returning all statistics properties for a table  
  The following example returns properties of all statistics that exist for the table TEST.  
   
-```t-sql  
+```sql  
 SELECT sp.stats_id, name, filter_definition, last_updated, rows, rows_sampled, steps, unfiltered_rows, modification_counter   
 FROM sys.stats AS stat   
 CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp  
@@ -97,7 +94,7 @@ WHERE stat.object_id = object_id('TEST');
 ### C. Returning statistics properties for frequently modified objects  
  The following example returns all tables, indexed views, and statistics in the current database for which the leading column was modified more than 1000 times since the last statistics update.  
   
-```t-sql  
+```sql  
 SELECT obj.name, obj.object_id, stat.name, stat.stats_id, last_updated, modification_counter  
 FROM sys.objects AS obj   
 INNER JOIN sys.stats AS stat ON stat.object_id = obj.object_id  

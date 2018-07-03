@@ -1,5 +1,6 @@
 # [SQL Operations Studio (preview)](what-is.md)
 # [Install](download.md)
+# [Release notes](release-notes.md)
 # Quickstarts
 ## [Connect & query SQL Server](quickstart-sql-server.md)
 ## [Connect & query Azure SQL Database](quickstart-sql-database.md)
@@ -12,6 +13,7 @@
 ## [Backup and restore](tutorial-backup-restore-sql-server.md)
 # How-to guides
 ## [Dashboards & insight widgets](insight-widgets.md)
+## [Extensions](extensions.md)
 ## [Code snippets](code-snippets.md)
 ## [Integrated terminal (PowerShell, Bash)](integrated-terminal.md)
 ## [Keyboard shortcuts](keyboard-shortcuts.md)

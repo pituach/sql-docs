@@ -1,38 +1,16 @@
 ---
 title: "Programming AMO Complementary Classes and Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "analysis-services"
-ms.prod_service: "analysis-services"
-ms.service: ""
-ms.component: ""
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "restores [AMO]"
-  - "assemblies [AMO]"
-  - "AMO, backup and restore"
-  - "capture logs [AMO]"
-  - "programming [AMO]"
-  - "Analysis Management Objects, backup and restore"
-  - "traces [AMO]"
-  - "backups [AMO]"
-ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Programming AMO Complementary Classes and Methods
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This topic contains the following sections:  
   
 -   [Assembly Class](#Assembly)  
