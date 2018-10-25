@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "33027 (Database Engine error)"
 ms.assetid: bfdc626e-7958-4511-987d-3b687824e8af
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

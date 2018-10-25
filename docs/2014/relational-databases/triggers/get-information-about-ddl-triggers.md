@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "metadata [SQL Server], triggers"
   - "status information [SQL Server], DDL triggers"
   - "DDL triggers, metadata"
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg

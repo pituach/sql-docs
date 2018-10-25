@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "21899 (Database Engine error)"
 ms.assetid: 32b87a7c-5380-4638-b147-dd78618f6625
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

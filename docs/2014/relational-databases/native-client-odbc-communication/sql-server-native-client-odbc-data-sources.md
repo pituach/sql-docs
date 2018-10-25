@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC data sources, about data sources"
@@ -19,7 +15,6 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data sources"
   - "ODBC data sources"
 ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "first triggers [SQL Server]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "INSTEAD OF triggers"
   - "AFTER triggers"
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
-caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg

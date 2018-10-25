@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

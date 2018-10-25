@@ -5,9 +5,7 @@ ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE TRIGGER"
@@ -28,9 +26,8 @@ helpviewer_keywords:
   - "triggers [SQL Server], creating"
   - "database-scoped triggers [SQL Server]"
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: 140
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.reviewer: mathoma
 ---
@@ -51,7 +48,7 @@ ms.reviewer: mathoma
   
 ## Syntax  
   
-```sql  
+``` 
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -73,7 +70,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
   
 ```  
   
-```sql  
+``` 
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a 
 -- table (DML Trigger on memory-optimized tables)  
@@ -92,7 +89,7 @@ AS { sql_statement  [ ; ] [ ,...n ] }
   
 ```  
   
-```sql  
+``` 
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE or UPDATE statement (DDL Trigger)  
   
@@ -108,7 +105,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-```sql  
+```  
 -- Trigger on a LOGON event (Logon Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER trigger_name   
@@ -125,8 +122,8 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ## Syntax  
   
-```sql  
--- Windows Azure SQL Database Syntax   
+``` 
+-- Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER [ schema_name . ]trigger_name   
@@ -141,8 +138,8 @@ ON { table | view }
   
 ```  
   
-```sql  
--- Windows Azure SQL Database Syntax  
+```  
+-- Azure SQL Database Syntax  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE, or UPDATE STATISTICS statement (DDL Trigger)   
   
@@ -328,12 +325,12 @@ SELECT * FROM deleted;
 ### Optimizing DML Triggers
  Triggers work in transactions (implied, or otherwise) and while they are open, they lock resources. The lock will remain in place until the transaction is confirmed (with COMMIT) or rejected (with a ROLLBACK). The longer a trigger runs, the higher the probability that another process will be blocked. Therefore, triggers should be written in a way to decrease their duration whenever possible. One way to achieve this is to release a trigger when a DML statement changes 0 rows. 
 
-To release the trigger for a command that that does not change any rows, employ the system variable  [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
+To release the trigger for a command that does not change any rows, employ the system variable  [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md). 
 
 The following T-SQL code snippet will achieve this, and should be present at the beginning of each DML trigger:
 
 ```sql
-IF (@@ROWCOUNT_BIG = 0)
+IF (ROWCOUNT_BIG() = 0)
 RETURN;
 ```
   
@@ -554,7 +551,7 @@ END;
 ```  
   
 ### G. Viewing the events that cause a trigger to fire  
- The following example queries the `sys.triggers` and `sys.trigger_events` catalog views to determine which [!INCLUDE[tsql](../../includes/tsql-md.md)] language events cause trigger `safety` to fire. `safety` is created in the previous example.  
+ The following example queries the `sys.triggers` and `sys.trigger_events` catalog views to determine which [!INCLUDE[tsql](../../includes/tsql-md.md)] language events cause trigger `safety` to fire. The trigger, `safety`, is created in example 'D', found above.  
   
 ```sql  
 SELECT TE.*  

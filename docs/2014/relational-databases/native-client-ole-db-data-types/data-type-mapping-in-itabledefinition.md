@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "mapping data types [OLE DB]"
@@ -19,7 +15,6 @@ helpviewer_keywords:
   - "CreateTable function"
   - "OLE DB, data types"
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg

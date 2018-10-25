@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.newrole.f1"
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -29,7 +26,7 @@ manager: craigg
  **Name**  
  Type the name of the role definition. A role definition name must be unique within the report server namespace. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the following characters when specifying a name:  
   
- ; ? : @ & = + , $ / * \< >  
+ ; ? : \@ & = + , $ / * \< >  
   
  " /  
   

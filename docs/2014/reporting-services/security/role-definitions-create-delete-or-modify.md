@@ -4,10 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "roles [Reporting Services], creating"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "roles [Reporting Services], deleting"
   - "roles [Reporting Services], modifying"
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -43,7 +40,7 @@ manager: craigg
   
      Or, if you are creating a system-level role definition, right-click **System Roles**, and point to **New System Role**.  
   
-4.  Type a unique name for the role. A name must contain at least one character. It can also include spaces and certain symbols, but not the characters ; ? : @ & = + , $ / * \< > | " or /.  
+4.  Type a unique name for the role. A name must contain at least one character. It can also include spaces and certain symbols, but not the characters ; ? : \@ & = + , $ / * \< > | " or /.  
   
 5.  Optionally type a description. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] this description is visible only on this page. Users who view this item through Report Manager can see this description in that tool.  
   

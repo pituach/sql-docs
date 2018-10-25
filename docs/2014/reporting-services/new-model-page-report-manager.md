@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -39,7 +36,7 @@ manager: craigg
  **Name**  
  Specifies the name of the model. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the following characters when specifying a name:  
   
- ; ? : @ & = + , $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Description**  
  Shows a description of the model. Users who view this item through Report Manager see this description when browsing the folder hierarchy.  

@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: "reference"
 ms.assetid: f3303072-2b44-4443-936c-f024b0b2a8c5
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg

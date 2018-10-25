@@ -4,13 +4,10 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -79,7 +76,7 @@ manager: craigg
   
 -   Standard  
   
- Depending on the edition of SQL Server Analysis Services that you connect to, some of the advanced algorithms might not be available. For information, see [Features Supported by the Editions of SQL Server 2014](https://msdn.microsoft.com/en-us/library/cc645993.aspx).  
+ Depending on the edition of SQL Server Analysis Services that you connect to, some of the advanced algorithms might not be available. For information, see [Features Supported by the Editions of SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   
  For additional help with installation, see this page on the Download Center: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   

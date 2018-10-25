@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "reporting-services-native"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.modelproperties.general.f1"
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -35,7 +32,7 @@ manager: craigg
  **Name**  
  Specifies the name of the model. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the following characters when specifying a name:  
   
- ; ? : @ & = + , $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Description**  
  Type a description of the model. This description appears in the Contents page to users who have permission to access the modelt.  

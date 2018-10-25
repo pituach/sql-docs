@@ -1,13 +1,11 @@
 ---
 title: "STRING_SPLIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "10/11/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STRING_SPLIT"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "STRING_SPLIT function"
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # STRING_SPLIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Splits the character expression using specified separator.  
   
