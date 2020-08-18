@@ -20,7 +20,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 ```  
    
 ##  <a name="BKMK_alwayson_health"></a> Alwayson_health session  
- The alwayson_health extended events session is created automatically when you create the availability group, and captures a subset of the availability group related events. This session is preconfigured as a useful and convenient tool to help you get started quickly while troubleshooting an availability group. The Create Availability Group Wizard automatically starts the session on every participating availability replica configured in the wizard.  
+ The alwayson_health extended events session is used for the availability group. It captures a subset of the availability group related events. This session is preconfigured as a useful and convenient tool to help you get started quickly while troubleshooting an availability group. The Create Availability Group Wizard automatically starts the session on every participating availability replica configured in the wizard.  
   
 > [!IMPORTANT]  
 >  If you did not create the availability group using the **New Availability Group Wizard**, the alwayson_health session may not be automatically started. If the session is not started, it cannot capture event data when an unexpected issue occurs. You should manually start the session and configure the session to start automatically by configuring the session properties.  
